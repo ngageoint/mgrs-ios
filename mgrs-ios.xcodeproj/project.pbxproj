@@ -1,0 +1,784 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04281FF62899BD7F00026382 /* mgrs_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04281FED2899BD7F00026382 /* mgrs_ios.framework */; };
+		04281FFC2899BD7F00026382 /* mgrs_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 04281FF02899BD7F00026382 /* mgrs_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04F520F128A2F4FA004C6D8C /* mgrs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F520F028A2F4FA004C6D8C /* mgrs.plist */; };
+		04F5210F28A570DB004C6D8C /* ReadmeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5210E28A570DB004C6D8C /* ReadmeTestCase.swift */; };
+		04F5214028AE50EB004C6D8C /* appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5213F28AE50EB004C6D8C /* appApp.swift */; };
+		04F5214228AE50EB004C6D8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5214128AE50EB004C6D8C /* ContentView.swift */; };
+		04F5214428AE50ED004C6D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F5214328AE50ED004C6D8C /* Assets.xcassets */; };
+		04F5214728AE50ED004C6D8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F5214628AE50ED004C6D8C /* Preview Assets.xcassets */; };
+		04F5214B28AE6843004C6D8C /* mgrs_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04281FED2899BD7F00026382 /* mgrs_ios.framework */; };
+		3C4D02AC93B567611301AF4B /* Pods_mgrs_ios_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AFABEFB265F4FCD511D677 /* Pods_mgrs_ios_app.framework */; };
+		3E31C5C3A1BED7E561A734E9 /* Pods_mgrs_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119573E9C3501EC325BEC3E4 /* Pods_mgrs_ios.framework */; };
+		C711E585DD24F5A13CA3528A /* Pods_mgrs_ios_mgrs_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68849929730CAFC68EFDCDAE /* Pods_mgrs_ios_mgrs_iosTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04281FF72899BD7F00026382 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04281FE42899BD7F00026382 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04281FEC2899BD7F00026382;
+			remoteInfo = "mgrs-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04281FED2899BD7F00026382 /* mgrs_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = mgrs_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04281FF02899BD7F00026382 /* mgrs_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mgrs_ios.h; sourceTree = "<group>"; };
+		04281FF52899BD7F00026382 /* mgrs-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mgrs-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F520F028A2F4FA004C6D8C /* mgrs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mgrs.plist; sourceTree = "<group>"; };
+		04F5210E28A570DB004C6D8C /* ReadmeTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReadmeTestCase.swift; path = "mgrs-iosTests/ReadmeTestCase.swift"; sourceTree = SOURCE_ROOT; };
+		04F5213D28AE50EB004C6D8C /* MGRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F5213F28AE50EB004C6D8C /* appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appApp.swift; sourceTree = "<group>"; };
+		04F5214128AE50EB004C6D8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04F5214328AE50ED004C6D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04F5214628AE50ED004C6D8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		119573E9C3501EC325BEC3E4 /* Pods_mgrs_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mgrs_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3295100FC695C71079321C28 /* Pods-mgrs-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mgrs-ios.release.xcconfig"; path = "Target Support Files/Pods-mgrs-ios/Pods-mgrs-ios.release.xcconfig"; sourceTree = "<group>"; };
+		43F6D866DB2D2299E81BE1D4 /* Pods-mgrs-ios-mgrs-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mgrs-ios-mgrs-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-mgrs-ios-mgrs-iosTests/Pods-mgrs-ios-mgrs-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		449E8DB981E6CC3061EE3115 /* Pods-mgrs-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mgrs-iosTests.release.xcconfig"; path = "Target Support Files/Pods-mgrs-iosTests/Pods-mgrs-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E9E5249E3C73D594F06BCAF /* Pods-mgrs-ios-mgrs-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mgrs-ios-mgrs-iosTests.release.xcconfig"; path = "Target Support Files/Pods-mgrs-ios-mgrs-iosTests/Pods-mgrs-ios-mgrs-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		57AFABEFB265F4FCD511D677 /* Pods_mgrs_ios_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mgrs_ios_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D58E6BA97BDC5648771260C /* Pods-mgrs-ios-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mgrs-ios-app.release.xcconfig"; path = "Target Support Files/Pods-mgrs-ios-app/Pods-mgrs-ios-app.release.xcconfig"; sourceTree = "<group>"; };
+		68849929730CAFC68EFDCDAE /* Pods_mgrs_ios_mgrs_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mgrs_ios_mgrs_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DA3F5E5DB70A8B01B8E6657 /* Pods-mgrs-ios-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mgrs-ios-app.debug.xcconfig"; path = "Target Support Files/Pods-mgrs-ios-app/Pods-mgrs-ios-app.debug.xcconfig"; sourceTree = "<group>"; };
+		92880B6C95E606EF80A8E4FC /* Pods-mgrs-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mgrs-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-mgrs-iosTests/Pods-mgrs-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E851D60405F0F6192D5968E0 /* Pods-mgrs-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mgrs-ios.debug.xcconfig"; path = "Target Support Files/Pods-mgrs-ios/Pods-mgrs-ios.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04281FEA2899BD7F00026382 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E31C5C3A1BED7E561A734E9 /* Pods_mgrs_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04281FF22899BD7F00026382 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04281FF62899BD7F00026382 /* mgrs_ios.framework in Frameworks */,
+				C711E585DD24F5A13CA3528A /* Pods_mgrs_ios_mgrs_iosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F5213A28AE50EB004C6D8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F5214B28AE6843004C6D8C /* mgrs_ios.framework in Frameworks */,
+				3C4D02AC93B567611301AF4B /* Pods_mgrs_ios_app.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04281FE32899BD7F00026382 = {
+			isa = PBXGroup;
+			children = (
+				04281FEF2899BD7F00026382 /* mgrs-ios */,
+				04281FF92899BD7F00026382 /* mgrs-iosTests */,
+				04F5213E28AE50EB004C6D8C /* app */,
+				04281FEE2899BD7F00026382 /* Products */,
+				893E1AC857AF11139CB60595 /* Pods */,
+				6F74DC420EB3232760614D11 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04281FEE2899BD7F00026382 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04281FED2899BD7F00026382 /* mgrs_ios.framework */,
+				04281FF52899BD7F00026382 /* mgrs-iosTests.xctest */,
+				04F5213D28AE50EB004C6D8C /* MGRS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04281FEF2899BD7F00026382 /* mgrs-ios */ = {
+			isa = PBXGroup;
+			children = (
+				04281FF02899BD7F00026382 /* mgrs_ios.h */,
+				04F520F028A2F4FA004C6D8C /* mgrs.plist */,
+			);
+			path = "mgrs-ios";
+			sourceTree = "<group>";
+		};
+		04281FF92899BD7F00026382 /* mgrs-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				04F5210E28A570DB004C6D8C /* ReadmeTestCase.swift */,
+			);
+			path = "mgrs-iosTests";
+			sourceTree = "<group>";
+		};
+		04F5213E28AE50EB004C6D8C /* app */ = {
+			isa = PBXGroup;
+			children = (
+				04F5213F28AE50EB004C6D8C /* appApp.swift */,
+				04F5214128AE50EB004C6D8C /* ContentView.swift */,
+				04F5214328AE50ED004C6D8C /* Assets.xcassets */,
+				04F5214528AE50ED004C6D8C /* Preview Content */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		04F5214528AE50ED004C6D8C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				04F5214628AE50ED004C6D8C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6F74DC420EB3232760614D11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				119573E9C3501EC325BEC3E4 /* Pods_mgrs_ios.framework */,
+				68849929730CAFC68EFDCDAE /* Pods_mgrs_ios_mgrs_iosTests.framework */,
+				57AFABEFB265F4FCD511D677 /* Pods_mgrs_ios_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		893E1AC857AF11139CB60595 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E851D60405F0F6192D5968E0 /* Pods-mgrs-ios.debug.xcconfig */,
+				3295100FC695C71079321C28 /* Pods-mgrs-ios.release.xcconfig */,
+				43F6D866DB2D2299E81BE1D4 /* Pods-mgrs-ios-mgrs-iosTests.debug.xcconfig */,
+				4E9E5249E3C73D594F06BCAF /* Pods-mgrs-ios-mgrs-iosTests.release.xcconfig */,
+				92880B6C95E606EF80A8E4FC /* Pods-mgrs-iosTests.debug.xcconfig */,
+				449E8DB981E6CC3061EE3115 /* Pods-mgrs-iosTests.release.xcconfig */,
+				6DA3F5E5DB70A8B01B8E6657 /* Pods-mgrs-ios-app.debug.xcconfig */,
+				5D58E6BA97BDC5648771260C /* Pods-mgrs-ios-app.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		04281FE82899BD7F00026382 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04281FFC2899BD7F00026382 /* mgrs_ios.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		04281FEC2899BD7F00026382 /* mgrs-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04281FFF2899BD7F00026382 /* Build configuration list for PBXNativeTarget "mgrs-ios" */;
+			buildPhases = (
+				B993E02F2C99A4D637D2A1D2 /* [CP] Check Pods Manifest.lock */,
+				04281FE82899BD7F00026382 /* Headers */,
+				04281FE92899BD7F00026382 /* Sources */,
+				04281FEA2899BD7F00026382 /* Frameworks */,
+				04281FEB2899BD7F00026382 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mgrs-ios";
+			productName = "mgrs-ios";
+			productReference = 04281FED2899BD7F00026382 /* mgrs_ios.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		04281FF42899BD7F00026382 /* mgrs-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 042820022899BD7F00026382 /* Build configuration list for PBXNativeTarget "mgrs-iosTests" */;
+			buildPhases = (
+				321F54B66A477D58A760C00E /* [CP] Check Pods Manifest.lock */,
+				04281FF12899BD7F00026382 /* Sources */,
+				04281FF22899BD7F00026382 /* Frameworks */,
+				04281FF32899BD7F00026382 /* Resources */,
+				BCAE3C0A4C5A4D2D98CF5CD1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04281FF82899BD7F00026382 /* PBXTargetDependency */,
+			);
+			name = "mgrs-iosTests";
+			productName = "mgrs-iosTests";
+			productReference = 04281FF52899BD7F00026382 /* mgrs-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04F5213C28AE50EB004C6D8C /* app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04F5214A28AE50ED004C6D8C /* Build configuration list for PBXNativeTarget "app" */;
+			buildPhases = (
+				CACD82A92A43FC4E4A8CE1FB /* [CP] Check Pods Manifest.lock */,
+				04F5213928AE50EB004C6D8C /* Sources */,
+				04F5213A28AE50EB004C6D8C /* Frameworks */,
+				04F5213B28AE50EB004C6D8C /* Resources */,
+				C2009388D6184989A1FB0D2F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = app;
+			productName = app;
+			productReference = 04F5213D28AE50EB004C6D8C /* MGRS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04281FE42899BD7F00026382 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					04281FEC2899BD7F00026382 = {
+						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
+					};
+					04281FF42899BD7F00026382 = {
+						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
+					};
+					04F5213C28AE50EB004C6D8C = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 04281FE72899BD7F00026382 /* Build configuration list for PBXProject "mgrs-ios" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04281FE32899BD7F00026382;
+			productRefGroup = 04281FEE2899BD7F00026382 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04281FEC2899BD7F00026382 /* mgrs-ios */,
+				04281FF42899BD7F00026382 /* mgrs-iosTests */,
+				04F5213C28AE50EB004C6D8C /* app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04281FEB2899BD7F00026382 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F520F128A2F4FA004C6D8C /* mgrs.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04281FF32899BD7F00026382 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F5213B28AE50EB004C6D8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F5214728AE50ED004C6D8C /* Preview Assets.xcassets in Resources */,
+				04F5214428AE50ED004C6D8C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		321F54B66A477D58A760C00E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mgrs-ios-mgrs-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B993E02F2C99A4D637D2A1D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mgrs-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCAE3C0A4C5A4D2D98CF5CD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mgrs-ios-mgrs-iosTests/Pods-mgrs-ios-mgrs-iosTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mgrs-ios-mgrs-iosTests/Pods-mgrs-ios-mgrs-iosTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mgrs-ios-mgrs-iosTests/Pods-mgrs-ios-mgrs-iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2009388D6184989A1FB0D2F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mgrs-ios-app/Pods-mgrs-ios-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mgrs-ios-app/Pods-mgrs-ios-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mgrs-ios-app/Pods-mgrs-ios-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CACD82A92A43FC4E4A8CE1FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mgrs-ios-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04281FE92899BD7F00026382 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04281FF12899BD7F00026382 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F5210F28A570DB004C6D8C /* ReadmeTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04F5213928AE50EB004C6D8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F5214228AE50EB004C6D8C /* ContentView.swift in Sources */,
+				04F5214028AE50EB004C6D8C /* appApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04281FF82899BD7F00026382 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04281FEC2899BD7F00026382 /* mgrs-ios */;
+			targetProxy = 04281FF72899BD7F00026382 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04281FFD2899BD7F00026382 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		04281FFE2899BD7F00026382 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		042820002899BD7F00026382 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E851D60405F0F6192D5968E0 /* Pods-mgrs-ios.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mil.nga.mgrs;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		042820012899BD7F00026382 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3295100FC695C71079321C28 /* Pods-mgrs-ios.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mil.nga.mgrs;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		042820032899BD7F00026382 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43F6D866DB2D2299E81BE1D4 /* Pods-mgrs-ios-mgrs-iosTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mil.nga.mgrs-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		042820042899BD7F00026382 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E9E5249E3C73D594F06BCAF /* Pods-mgrs-ios-mgrs-iosTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mil.nga.mgrs-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04F5214828AE50ED004C6D8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DA3F5E5DB70A8B01B8E6657 /* Pods-mgrs-ios-app.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"app/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mil.nga.app;
+				PRODUCT_NAME = MGRS;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04F5214928AE50ED004C6D8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D58E6BA97BDC5648771260C /* Pods-mgrs-ios-app.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"app/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mil.nga.app;
+				PRODUCT_NAME = MGRS;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04281FE72899BD7F00026382 /* Build configuration list for PBXProject "mgrs-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04281FFD2899BD7F00026382 /* Debug */,
+				04281FFE2899BD7F00026382 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04281FFF2899BD7F00026382 /* Build configuration list for PBXNativeTarget "mgrs-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042820002899BD7F00026382 /* Debug */,
+				042820012899BD7F00026382 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		042820022899BD7F00026382 /* Build configuration list for PBXNativeTarget "mgrs-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				042820032899BD7F00026382 /* Debug */,
+				042820042899BD7F00026382 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04F5214A28AE50ED004C6D8C /* Build configuration list for PBXNativeTarget "app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F5214828AE50ED004C6D8C /* Debug */,
+				04F5214928AE50ED004C6D8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04281FE42899BD7F00026382 /* Project object */;
+}
