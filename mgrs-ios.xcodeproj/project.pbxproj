@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		04281FF62899BD7F00026382 /* mgrs_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04281FED2899BD7F00026382 /* mgrs_ios.framework */; };
 		04281FFC2899BD7F00026382 /* mgrs_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 04281FF02899BD7F00026382 /* mgrs_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04EF1DC928B4E69100760ED1 /* GridType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DC828B4E69100760ED1 /* GridType.swift */; };
+		04EF1DCC28B4EE7600760ED1 /* GridLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DCB28B4EE7600760ED1 /* GridLine.swift */; };
+		04EF1DCE28B4EFFD00760ED1 /* MGRSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DCD28B4EFFD00760ED1 /* MGRSConstants.swift */; };
+		04EF1DD028B4F31F00760ED1 /* MGRSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DCF28B4F31F00760ED1 /* MGRSUtils.swift */; };
+		04EF1DD328B5038400760ED1 /* MGRSProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DD228B5038400760ED1 /* MGRSProperties.swift */; };
+		04EF1DD728B5131E00760ED1 /* UTM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DD628B5131E00760ED1 /* UTM.swift */; };
+		04EF1DD928B5237400760ED1 /* MGRS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DD828B5237400760ED1 /* MGRS.swift */; };
+		04EF1DDB28B5437400760ED1 /* BandLetterRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DDA28B5437400760ED1 /* BandLetterRange.swift */; };
+		04EF1DDF28B547BF00760ED1 /* ZoneNumberRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DDE28B547BF00760ED1 /* ZoneNumberRange.swift */; };
+		04EF1DE128B54C2700760ED1 /* GridRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DE028B54C2700760ED1 /* GridRange.swift */; };
+		04EF1DE328B5514100760ED1 /* GridZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DE228B5514100760ED1 /* GridZone.swift */; };
+		04EF1DE528B551F100760ED1 /* LongitudinalStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DE428B551F100760ED1 /* LongitudinalStrip.swift */; };
+		04EF1DE728B5559F00760ED1 /* LatitudeBand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DE628B5559F00760ED1 /* LatitudeBand.swift */; };
 		04F520F128A2F4FA004C6D8C /* mgrs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F520F028A2F4FA004C6D8C /* mgrs.plist */; };
 		04F5210F28A570DB004C6D8C /* ReadmeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5210E28A570DB004C6D8C /* ReadmeTestCase.swift */; };
 		04F5214028AE50EB004C6D8C /* appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5213F28AE50EB004C6D8C /* appApp.swift */; };
@@ -35,6 +48,19 @@
 		04281FED2899BD7F00026382 /* mgrs_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = mgrs_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04281FF02899BD7F00026382 /* mgrs_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mgrs_ios.h; sourceTree = "<group>"; };
 		04281FF52899BD7F00026382 /* mgrs-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mgrs-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04EF1DC828B4E69100760ED1 /* GridType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridType.swift; sourceTree = "<group>"; };
+		04EF1DCB28B4EE7600760ED1 /* GridLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLine.swift; sourceTree = "<group>"; };
+		04EF1DCD28B4EFFD00760ED1 /* MGRSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSConstants.swift; sourceTree = "<group>"; };
+		04EF1DCF28B4F31F00760ED1 /* MGRSUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSUtils.swift; sourceTree = "<group>"; };
+		04EF1DD228B5038400760ED1 /* MGRSProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSProperties.swift; sourceTree = "<group>"; };
+		04EF1DD628B5131E00760ED1 /* UTM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTM.swift; sourceTree = "<group>"; };
+		04EF1DD828B5237400760ED1 /* MGRS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRS.swift; sourceTree = "<group>"; };
+		04EF1DDA28B5437400760ED1 /* BandLetterRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandLetterRange.swift; sourceTree = "<group>"; };
+		04EF1DDE28B547BF00760ED1 /* ZoneNumberRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneNumberRange.swift; sourceTree = "<group>"; };
+		04EF1DE028B54C2700760ED1 /* GridRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridRange.swift; sourceTree = "<group>"; };
+		04EF1DE228B5514100760ED1 /* GridZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridZone.swift; sourceTree = "<group>"; };
+		04EF1DE428B551F100760ED1 /* LongitudinalStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongitudinalStrip.swift; sourceTree = "<group>"; };
+		04EF1DE628B5559F00760ED1 /* LatitudeBand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatitudeBand.swift; sourceTree = "<group>"; };
 		04F520F028A2F4FA004C6D8C /* mgrs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mgrs.plist; sourceTree = "<group>"; };
 		04F5210E28A570DB004C6D8C /* ReadmeTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReadmeTestCase.swift; path = "mgrs-iosTests/ReadmeTestCase.swift"; sourceTree = SOURCE_ROOT; };
 		04F5213D28AE50EB004C6D8C /* MGRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +137,14 @@
 			isa = PBXGroup;
 			children = (
 				04281FF02899BD7F00026382 /* mgrs_ios.h */,
+				04EF1DD828B5237400760ED1 /* MGRS.swift */,
+				04EF1DCD28B4EFFD00760ED1 /* MGRSConstants.swift */,
+				04EF1DCF28B4F31F00760ED1 /* MGRSUtils.swift */,
+				04EF1DCA28B4EE5B00760ED1 /* features */,
+				04EF1DC728B4E66E00760ED1 /* grid */,
+				04EF1DD528B5079E00760ED1 /* gzd */,
+				04EF1DD128B5037000760ED1 /* property */,
+				04EF1DD428B5078D00760ED1 /* utm */,
 				04F520F028A2F4FA004C6D8C /* mgrs.plist */,
 			);
 			path = "mgrs-ios";
@@ -122,6 +156,51 @@
 				04F5210E28A570DB004C6D8C /* ReadmeTestCase.swift */,
 			);
 			path = "mgrs-iosTests";
+			sourceTree = "<group>";
+		};
+		04EF1DC728B4E66E00760ED1 /* grid */ = {
+			isa = PBXGroup;
+			children = (
+				04EF1DC828B4E69100760ED1 /* GridType.swift */,
+			);
+			path = grid;
+			sourceTree = "<group>";
+		};
+		04EF1DCA28B4EE5B00760ED1 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				04EF1DCB28B4EE7600760ED1 /* GridLine.swift */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		04EF1DD128B5037000760ED1 /* property */ = {
+			isa = PBXGroup;
+			children = (
+				04EF1DD228B5038400760ED1 /* MGRSProperties.swift */,
+			);
+			path = property;
+			sourceTree = "<group>";
+		};
+		04EF1DD428B5078D00760ED1 /* utm */ = {
+			isa = PBXGroup;
+			children = (
+				04EF1DD628B5131E00760ED1 /* UTM.swift */,
+			);
+			path = utm;
+			sourceTree = "<group>";
+		};
+		04EF1DD528B5079E00760ED1 /* gzd */ = {
+			isa = PBXGroup;
+			children = (
+				04EF1DDA28B5437400760ED1 /* BandLetterRange.swift */,
+				04EF1DE028B54C2700760ED1 /* GridRange.swift */,
+				04EF1DE228B5514100760ED1 /* GridZone.swift */,
+				04EF1DE628B5559F00760ED1 /* LatitudeBand.swift */,
+				04EF1DE428B551F100760ED1 /* LongitudinalStrip.swift */,
+				04EF1DDE28B547BF00760ED1 /* ZoneNumberRange.swift */,
+			);
+			path = gzd;
 			sourceTree = "<group>";
 		};
 		04F5213E28AE50EB004C6D8C /* app */ = {
@@ -418,6 +497,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EF1DD028B4F31F00760ED1 /* MGRSUtils.swift in Sources */,
+				04EF1DD928B5237400760ED1 /* MGRS.swift in Sources */,
+				04EF1DDF28B547BF00760ED1 /* ZoneNumberRange.swift in Sources */,
+				04EF1DE128B54C2700760ED1 /* GridRange.swift in Sources */,
+				04EF1DDB28B5437400760ED1 /* BandLetterRange.swift in Sources */,
+				04EF1DCE28B4EFFD00760ED1 /* MGRSConstants.swift in Sources */,
+				04EF1DD728B5131E00760ED1 /* UTM.swift in Sources */,
+				04EF1DD328B5038400760ED1 /* MGRSProperties.swift in Sources */,
+				04EF1DE328B5514100760ED1 /* GridZone.swift in Sources */,
+				04EF1DC928B4E69100760ED1 /* GridType.swift in Sources */,
+				04EF1DE528B551F100760ED1 /* LongitudinalStrip.swift in Sources */,
+				04EF1DE728B5559F00760ED1 /* LatitudeBand.swift in Sources */,
+				04EF1DCC28B4EE7600760ED1 /* GridLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +730,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43F6D866DB2D2299E81BE1D4 /* Pods-mgrs-ios-mgrs-iosTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -661,6 +754,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E9E5249E3C73D594F06BCAF /* Pods-mgrs-ios-mgrs-iosTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
