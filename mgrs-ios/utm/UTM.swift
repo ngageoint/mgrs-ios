@@ -108,12 +108,9 @@ public class UTM {
      *
      * @return MGRS
      */
-    // TODO
-    /*
     public func toMGRS() -> MGRS {
         return MGRS.from(toPoint())
     }
-     */
     
     /**
      * Format to a UTM string
@@ -156,8 +153,6 @@ public class UTM {
      * @param utm
      *            UTM value
      * @return UTM
-     * @throws ParseException
-     *             upon failure to parse UTM value
      */
     public static func parse(_ utm: String) -> UTM {
         let matches = utmExpression.matches(in: utm, range: NSMakeRange(0, utm.count))

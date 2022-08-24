@@ -22,6 +22,7 @@
 		04EF1DE328B5514100760ED1 /* GridZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DE228B5514100760ED1 /* GridZone.swift */; };
 		04EF1DE528B551F100760ED1 /* LongitudinalStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DE428B551F100760ED1 /* LongitudinalStrip.swift */; };
 		04EF1DE728B5559F00760ED1 /* LatitudeBand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DE628B5559F00760ED1 /* LatitudeBand.swift */; };
+		04EF1DE928B65FE100760ED1 /* GridZones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DE828B65FE100760ED1 /* GridZones.swift */; };
 		04F520F128A2F4FA004C6D8C /* mgrs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F520F028A2F4FA004C6D8C /* mgrs.plist */; };
 		04F5210F28A570DB004C6D8C /* ReadmeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5210E28A570DB004C6D8C /* ReadmeTestCase.swift */; };
 		04F5214028AE50EB004C6D8C /* appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5213F28AE50EB004C6D8C /* appApp.swift */; };
@@ -61,6 +62,7 @@
 		04EF1DE228B5514100760ED1 /* GridZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridZone.swift; sourceTree = "<group>"; };
 		04EF1DE428B551F100760ED1 /* LongitudinalStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongitudinalStrip.swift; sourceTree = "<group>"; };
 		04EF1DE628B5559F00760ED1 /* LatitudeBand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatitudeBand.swift; sourceTree = "<group>"; };
+		04EF1DE828B65FE100760ED1 /* GridZones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridZones.swift; sourceTree = "<group>"; };
 		04F520F028A2F4FA004C6D8C /* mgrs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mgrs.plist; sourceTree = "<group>"; };
 		04F5210E28A570DB004C6D8C /* ReadmeTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReadmeTestCase.swift; path = "mgrs-iosTests/ReadmeTestCase.swift"; sourceTree = SOURCE_ROOT; };
 		04F5213D28AE50EB004C6D8C /* MGRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,7 @@
 				04EF1DDA28B5437400760ED1 /* BandLetterRange.swift */,
 				04EF1DE028B54C2700760ED1 /* GridRange.swift */,
 				04EF1DE228B5514100760ED1 /* GridZone.swift */,
+				04EF1DE828B65FE100760ED1 /* GridZones.swift */,
 				04EF1DE628B5559F00760ED1 /* LatitudeBand.swift */,
 				04EF1DE428B551F100760ED1 /* LongitudinalStrip.swift */,
 				04EF1DDE28B547BF00760ED1 /* ZoneNumberRange.swift */,
@@ -510,6 +513,7 @@
 				04EF1DE528B551F100760ED1 /* LongitudinalStrip.swift in Sources */,
 				04EF1DE728B5559F00760ED1 /* LatitudeBand.swift in Sources */,
 				04EF1DCC28B4EE7600760ED1 /* GridLine.swift in Sources */,
+				04EF1DE928B65FE100760ED1 /* GridZones.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
