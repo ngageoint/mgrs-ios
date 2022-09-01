@@ -283,7 +283,7 @@ public class MGRS {
 
         // get easting specified by e100k
         let columnLetters = MGRS.columnLetters(zone)
-        let columnIndex = columnLetters.firstIndex(of: column)!.utf16Offset(in: columnLetters) + 1
+        let columnIndex = GridUtils.indexOf(columnLetters, column) + 1
         // index+1 since A (index 0) -> 1*100e3, B (index 1) -> 2*100e3, etc.
         let e100kNum = Double(columnIndex) * 100000.0 // e100k in meters
 
@@ -299,7 +299,7 @@ public class MGRS {
 
         // get northing specified by n100k
         let rowLetters = MGRS.rowLetters(zone)
-        let rowIndex = rowLetters.firstIndex(of: row)!.utf16Offset(in: rowLetters)
+        let rowIndex = GridUtils.indexOf(rowLetters, row)
         let n100kNum = Double(rowIndex) * 100000.0 // n100k in meters
 
         // get latitude of (bottom of) band
@@ -471,7 +471,7 @@ public class MGRS {
         // every 3rd zone
         let column = Int(floor(easting / 100000))
         let columnLetters = columnLetters(zoneNumber)
-        return columnLetters[columnLetters.index(columnLetters.startIndex, offsetBy: column - 1)]
+        return GridUtils.charAt(columnLetters, column - 1)
     }
 
     /**
@@ -498,7 +498,7 @@ public class MGRS {
         // rows in even zones are A-V, in odd zones are F-E
         let row = Int(floor(northing / 100000)) % 20
         let rowLetters = rowLetters(zoneNumber)
-        return rowLetters[rowLetters.index(rowLetters.startIndex, offsetBy: row)]
+        return GridUtils.charAt(rowLetters, row)
     }
 
     /**

@@ -50,12 +50,11 @@ public class MGRSUtils {
      */
     public static func nextBandLetter(_ letter: Character) -> Character {
         validateBandLetter(letter)
-        var letterValue = Int(letter.asciiValue!)
-        letterValue += 1
-        if GridUtils.isOmittedBandLetter(letter) {
-            letterValue += 1
+        var letterValue = GridUtils.incrementCharacter(letter)
+        if GridUtils.isOmittedBandLetter(letterValue) {
+            letterValue = GridUtils.incrementCharacter(letterValue)
         }
-        return Character(UnicodeScalar(letterValue)!)
+        return letterValue
     }
     
     /**
@@ -68,12 +67,11 @@ public class MGRSUtils {
      */
     public static func previousBandLetter(_ letter: Character) -> Character {
         validateBandLetter(letter)
-        var letterValue = Int(letter.asciiValue!)
-        letterValue -= 1
-        if GridUtils.isOmittedBandLetter(letter) {
-            letterValue -= 1
+        var letterValue = GridUtils.decrementCharacter(letter)
+        if GridUtils.isOmittedBandLetter(letterValue) {
+            letterValue = GridUtils.decrementCharacter(letterValue)
         }
-        return Character(UnicodeScalar(letterValue)!)
+        return letterValue
     }
     
     /**

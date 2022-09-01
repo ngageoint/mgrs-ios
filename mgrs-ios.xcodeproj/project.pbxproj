@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		04281FF62899BD7F00026382 /* mgrs_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04281FED2899BD7F00026382 /* mgrs_ios.framework */; };
 		04281FFC2899BD7F00026382 /* mgrs_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 04281FF02899BD7F00026382 /* mgrs_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04DADABE28C11EBE0068F52C /* GridTypeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADABD28C11EBE0068F52C /* GridTypeTestCase.swift */; };
+		04DADAC128C1235A0068F52C /* BandLetterRangeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAC028C1235A0068F52C /* BandLetterRangeTestCase.swift */; };
+		04DADAC328C12BC90068F52C /* GridZonesTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAC228C12BC90068F52C /* GridZonesTestCase.swift */; };
 		04EF1DC928B4E69100760ED1 /* GridType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DC828B4E69100760ED1 /* GridType.swift */; };
 		04EF1DCC28B4EE7600760ED1 /* GridLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DCB28B4EE7600760ED1 /* GridLine.swift */; };
 		04EF1DCE28B4EFFD00760ED1 /* MGRSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DCD28B4EFFD00760ED1 /* MGRSConstants.swift */; };
@@ -49,6 +52,9 @@
 		04281FED2899BD7F00026382 /* mgrs_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = mgrs_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04281FF02899BD7F00026382 /* mgrs_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mgrs_ios.h; sourceTree = "<group>"; };
 		04281FF52899BD7F00026382 /* mgrs-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mgrs-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DADABD28C11EBE0068F52C /* GridTypeTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTypeTestCase.swift; sourceTree = "<group>"; };
+		04DADAC028C1235A0068F52C /* BandLetterRangeTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandLetterRangeTestCase.swift; sourceTree = "<group>"; };
+		04DADAC228C12BC90068F52C /* GridZonesTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridZonesTestCase.swift; sourceTree = "<group>"; };
 		04EF1DC828B4E69100760ED1 /* GridType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridType.swift; sourceTree = "<group>"; };
 		04EF1DCB28B4EE7600760ED1 /* GridLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLine.swift; sourceTree = "<group>"; };
 		04EF1DCD28B4EFFD00760ED1 /* MGRSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSConstants.swift; sourceTree = "<group>"; };
@@ -156,8 +162,27 @@
 			isa = PBXGroup;
 			children = (
 				04F5210E28A570DB004C6D8C /* ReadmeTestCase.swift */,
+				04DADABC28C11E8A0068F52C /* grid */,
+				04DADABF28C1233C0068F52C /* gzd */,
 			);
 			path = "mgrs-iosTests";
+			sourceTree = "<group>";
+		};
+		04DADABC28C11E8A0068F52C /* grid */ = {
+			isa = PBXGroup;
+			children = (
+				04DADABD28C11EBE0068F52C /* GridTypeTestCase.swift */,
+			);
+			path = grid;
+			sourceTree = "<group>";
+		};
+		04DADABF28C1233C0068F52C /* gzd */ = {
+			isa = PBXGroup;
+			children = (
+				04DADAC028C1235A0068F52C /* BandLetterRangeTestCase.swift */,
+				04DADAC228C12BC90068F52C /* GridZonesTestCase.swift */,
+			);
+			path = gzd;
 			sourceTree = "<group>";
 		};
 		04EF1DC728B4E66E00760ED1 /* grid */ = {
@@ -521,7 +546,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DADAC128C1235A0068F52C /* BandLetterRangeTestCase.swift in Sources */,
 				04F5210F28A570DB004C6D8C /* ReadmeTestCase.swift in Sources */,
+				04DADABE28C11EBE0068F52C /* GridTypeTestCase.swift in Sources */,
+				04DADAC328C12BC90068F52C /* GridZonesTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

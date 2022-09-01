@@ -409,9 +409,7 @@ public class GridZones {
             bands += 1
         }
 
-        var letter = Int(MGRSConstants.MIN_BAND_LETTER.asciiValue!)
-        letter += bands
-        return Character(UnicodeScalar(letter)!)
+        return GridUtils.incrementCharacter(MGRSConstants.MIN_BAND_LETTER, bands)
     }
     
     /**
