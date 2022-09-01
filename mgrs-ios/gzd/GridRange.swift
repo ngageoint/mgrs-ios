@@ -49,8 +49,6 @@ public class GridRange: Sequence {
      *
      * @return bounds
      */
-    // TODO
-    /*
     public func bounds() -> Bounds {
 
         let west = zoneNumberRange.westLongitude()
@@ -60,7 +58,6 @@ public class GridRange: Sequence {
 
         return Bounds.degrees(west, south, east, north)
     }
-     */
     
     public func makeIterator() -> GridRangeIterator {
         return GridRangeIterator(self)
@@ -89,8 +86,64 @@ public struct GridRangeIterator: IteratorProtocol {
     }
 
     public mutating func next() -> GridZone? {
-        // TODO
-        return nil
+        var gridZone: GridZone? = nil
+
+        while gridZone == nil && zoneNumber <= maxZoneNumber {
+            
+            gridZone = GridZones.gridZone(zoneNumber, bandLetter)
+
+            // Handle special case grid gaps (Svalbard)
+            if gridZone == nil {
+
+                // Retrieve the western grid if on the left edge
+                if zoneNumber == minZoneNumber {
+                    additional.append(GridZones.gridZone(zoneNumber - 1, bandLetter))
+                }
+
+                // Expand to the eastern grid if on the right edge
+                if zoneNumber == maxZoneNumber {
+                    additional.append(GridZones.gridZone(zoneNumber + 1, bandLetter))
+                }
+
+            } else {
+
+                // Handle special case grid zone expansions (Norway)
+                let expand = gridZone!.stripExpand()
+                if expand != 0 {
+                    if expand > 0 {
+                        for expandZone in stride(from: zoneNumber + expand, to: zoneNumber, by: -1) {
+                            if expandZone > maxZoneNumber {
+                                additional.append(GridZones.gridZone(expandZone, bandLetter))
+                            } else {
+                                break
+                            }
+                        }
+                    } else {
+                        for expandZone in zoneNumber + expand ..< zoneNumber {
+                            if expandZone < minZoneNumber {
+                                additional.append(GridZones.gridZone(expandZone, bandLetter))
+                            } else {
+                                break
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            bandLetter = MGRSUtils.nextBandLetter(bandLetter)
+            if bandLetter > maxBandLetter {
+                zoneNumber += 1
+                bandLetter = minBandLetter
+            }
+            
+        }
+        
+        if gridZone == nil && additional.count > 0 {
+            gridZone = additional.removeFirst()
+        }
+        
+        return gridZone
     }
     
 }

@@ -47,24 +47,18 @@ public class BandLetterRange: Sequence {
      *
      * @return latitude
      */
-    // TODO
-    /*
     public func southLatitude() -> Double {
         return GridZones.latitudeBand(south).south
     }
-     */
     
     /**
      * Get the northern latitude
      *
      * @return latitude
      */
-    // TODO
-    /*
     public func northLatitude() -> Double {
         return GridZones.latitudeBand(north).north
     }
-     */
     
     public func makeIterator() -> BandLetterRangeIterator {
         return BandLetterRangeIterator(self)

@@ -69,7 +69,7 @@ public struct MGRSConstants {
     public static let BAND_HEIGHT = 8.0
 
     /**
-     * Grid band height for the {@link #MAX_BAND_LETTER}
+     * Grid band height for the MAX_BAND_LETTER
      */
     public static let MAX_BAND_HEIGHT = 12.0
 

@@ -20,8 +20,8 @@ public class MGRSUtils {
      *            zone number
      */
     public static func validateZoneNumber(_ number: Int) {
-        if (number < MGRSConstants.MIN_ZONE_NUMBER
-                || number > MGRSConstants.MAX_ZONE_NUMBER) {
+        if number < MGRSConstants.MIN_ZONE_NUMBER
+                || number > MGRSConstants.MAX_ZONE_NUMBER {
             preconditionFailure("Illegal zone number (expected \(MGRSConstants.MIN_ZONE_NUMBER) - \(MGRSConstants.MAX_ZONE_NUMBER)): \(number)")
         }
     }
@@ -33,9 +33,9 @@ public class MGRSUtils {
      *            band letter
      */
     public static func validateBandLetter(_ letter: Character) {
-        if (letter < MGRSConstants.MIN_BAND_LETTER
+        if letter < MGRSConstants.MIN_BAND_LETTER
                 || letter > MGRSConstants.MAX_BAND_LETTER
-                || GridUtils.isOmittedBandLetter(letter)) {
+                || GridUtils.isOmittedBandLetter(letter) {
             preconditionFailure("Illegal band letter (CDEFGHJKLMNPQRSTUVWX): \(letter)")
         }
     }

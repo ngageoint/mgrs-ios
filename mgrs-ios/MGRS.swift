@@ -371,9 +371,9 @@ public class MGRS {
         let rowLetter = rowLetter(utm)
 
         // truncate easting/northing to within 100km grid square
-        let easting = Int(utm.easting % 100000)
-        let northing = Int(utm.northing % 100000)
-
+        let easting = Int(utm.easting.truncatingRemainder(dividingBy: 100000))
+        let northing = Int(utm.northing.truncatingRemainder(dividingBy: 100000))
+        
         return MGRS(utm.zone, bandLetter, columnLetter, rowLetter,
                 easting, northing)
     }
@@ -401,7 +401,7 @@ public class MGRS {
             let mgrsString = mgrsValue as NSString
 
             let location = mgrsString.substring(with: match.range(at: 4))
-            if (location.count > 0) {
+            if location.count > 0 {
                 precision = GridType.withAccuracy(location.count / 2)
             } else {
                 precision = GridType.HUNDRED_KILOMETER

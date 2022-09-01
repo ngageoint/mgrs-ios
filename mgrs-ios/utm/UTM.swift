@@ -178,12 +178,9 @@ public class UTM {
      *            point
      * @return UTM
      */
-    // TODO
-    /*
     public static func from(_ point: GridPoint) -> UTM {
         return from(point, GridZones.zoneNumber(point))
     }
-     */
 
     /**
      * Create from a point and zone number

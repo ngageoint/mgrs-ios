@@ -47,24 +47,18 @@ public class ZoneNumberRange: Sequence {
      *
      * @return longitude
      */
-    // TODO
-    /*
     public func westLongitude() -> Double {
         return GridZones.longitudinalStrip(west).west
     }
-     */
     
     /**
      * Get the eastern longitude
      *
      * @return longitude
      */
-    // TODO
-    /*
     public func eastLongitude() -> Double {
         return GridZones.longitudinalStrip(east).east
     }
-     */
     
     public func makeIterator() -> ZoneNumberRangeIterator {
         return ZoneNumberRangeIterator(self)

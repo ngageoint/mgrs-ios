@@ -65,13 +65,13 @@ public class GridZones {
 
                 var gridZoneStrip: LongitudinalStrip? = strip
 
-                if (isSvalbard(zoneNumber, bandLetter)) {
+                if isSvalbard(zoneNumber, bandLetter) {
                     gridZoneStrip = svalbardStrip(strip)
-                } else if (isNorway(zoneNumber, bandLetter)) {
+                } else if isNorway(zoneNumber, bandLetter) {
                     gridZoneStrip = norwayStrip(strip)
                 }
 
-                if (gridZoneStrip != nil) {
+                if gridZoneStrip != nil {
                     stripGridZones[bandLetter] = GridZone(gridZoneStrip!, band)
                 }
 
@@ -162,7 +162,7 @@ public class GridZones {
      *            bounds
      * @return grid zones
      */
-    public static func zones(_ bounds -> Bounds) -> [GridZone] {
+    public static func zones(_ bounds: Bounds) -> [GridZone] {
 
         var zones: [GridZone] = []
 
@@ -223,7 +223,7 @@ public class GridZones {
      */
     public static func zoneNumberRange(_ bounds: Bounds) -> ZoneNumberRange {
         let boundsDegrees = bounds.toDegrees()
-        return zoneNumberRange(bounds.west, bounds.east)
+        return zoneNumberRange(boundsDegrees.west, boundsDegrees.east)
     }
     
     /**
@@ -250,7 +250,7 @@ public class GridZones {
      */
     public static func zoneNumber(_ point: GridPoint) -> Int {
         let pointDegrees = point.toDegrees()
-        return zoneNumber(point.longitude, point.latitude)
+        return zoneNumber(pointDegrees.longitude, pointDegrees.latitude)
     }
     
     /**
@@ -269,9 +269,9 @@ public class GridZones {
         if svalbardZone || norwayZone {
             let bandLetter = bandLetter(latitude)
             if svalbardZone && isSvalbardLetter(bandLetter) {
-                zoneNum = svalbardZone(longitude)
+                zoneNum = self.svalbardZone(longitude)
             } else if norwayZone && isNorwayLetter(bandLetter) {
-                zoneNum = norwayZone(longitude)
+                zoneNum = self.norwayZone(longitude)
             }
         }
         return zoneNum
@@ -279,7 +279,7 @@ public class GridZones {
     
     /**
      * Get the zone number of the longitude (degrees between
-     * {@link MGRSConstants#MIN_LON} and {@link MGRSConstants#MAX_LON}). Eastern
+     * MGRSConstants.MIN_LON and MGRSConstants.MAX_LON). Eastern
      * zone number on borders.
      *
      * @param longitude
@@ -292,7 +292,7 @@ public class GridZones {
 
     /**
      * Get the zone number of the longitude (degrees between
-     * {@link MGRSConstants#MIN_LON} and {@link MGRSConstants#MAX_LON})
+     * MGRSConstants.MIN_LON and MGRSConstants.MAX_LON)
      *
      * @param longitude
      *            longitude in degrees
@@ -305,10 +305,11 @@ public class GridZones {
         var longitudeValue = longitude
         
         // Normalize the longitude if needed
-        if (longitudeValue < MGRSConstants.MIN_LON
-                || longitudeValue > MGRSConstants.MAX_LON) {
+        if longitudeValue < MGRSConstants.MIN_LON
+                || longitudeValue > MGRSConstants.MAX_LON {
             longitudeValue = (longitudeValue - MGRSConstants.MIN_LON)
-                    % (2 * MGRSConstants.MAX_LON) + MGRSConstants.MIN_LON
+                .truncatingRemainder(dividingBy: 2 * MGRSConstants.MAX_LON)
+                + MGRSConstants.MIN_LON
         }
 
         // Determine the zone
@@ -317,18 +318,101 @@ public class GridZones {
         var zoneNumber = 1 + Int(zoneValue)
 
         // Handle western edge cases and 180.0
-        if (!eastern) {
-            if (zoneNumber > 1 && zoneValue % 1.0 == 0.0) {
+        if !eastern {
+            if zoneNumber > 1 && zoneValue.truncatingRemainder(dividingBy: 1.0) == 0.0 {
                 zoneNumber -= 1
             }
-        } else if (zoneNumber > MGRSConstants.MAX_ZONE_NUMBER) {
+        } else if zoneNumber > MGRSConstants.MAX_ZONE_NUMBER {
             zoneNumber -= 1
         }
 
         return zoneNumber
     }
     
-    // TODO
+    /**
+     * Get a band letter range between the southern and northern bounds
+     *
+     * @param bounds
+     *            bounds
+     * @return band letter range
+     */
+    public static func bandLetterRange(_ bounds: Bounds) -> BandLetterRange {
+        let boundsDegrees = bounds.toDegrees()
+        return bandLetterRange(boundsDegrees.south, boundsDegrees.north)
+    }
+
+    /**
+     * Get a band letter range between the southern and northern latitudes in
+     * degrees
+     *
+     * @param south
+     *            southern latitude in degrees
+     * @param north
+     *            northern latitude in degrees
+     * @return band letter range
+     */
+    public static func bandLetterRange(_ south: Double, _ north: Double) -> BandLetterRange {
+        let southLetter = bandLetter(south, false)
+        let northLetter = bandLetter(north, true)
+        return BandLetterRange(southLetter, northLetter)
+    }
+    
+    /**
+     * Get the band letter of the latitude (degrees between
+     * MGRSConstants.MIN_LAT and MGRSConstants.MAX_LAT).
+     * Northern band letter on borders.
+     *
+     * @param latitude
+     *            latitude in degrees
+     * @return band letter
+     */
+    public static func bandLetter(_ latitude: Double) -> Character {
+        return bandLetter(latitude, true)
+    }
+
+    /**
+     * Get the band letter of the latitude (degrees between
+     * MGRSConstants.MIN_LAT and MGRSConstants.MAX_LAT)
+     *
+     * @param latitude
+     *            latitude in degrees
+     * @param northern
+     *            true for northern band on edges, false for southern
+     * @return band letter
+     */
+    public static func bandLetter(_ latitude: Double, _ northern: Bool) -> Character {
+
+        var latitudeValue = latitude
+        
+        // Bound the latitude if needed
+        if latitudeValue < MGRSConstants.MIN_LAT {
+            latitudeValue = MGRSConstants.MIN_LAT
+        } else if latitudeValue > MGRSConstants.MAX_LAT {
+            latitudeValue = MGRSConstants.MAX_LAT
+        }
+
+        let bandValue = (latitudeValue - MGRSConstants.MIN_LAT)
+                / MGRSConstants.BAND_HEIGHT
+        var bands = Int(bandValue)
+
+        // Handle 80.0 to 84.0 and southern edge cases
+        if bands >= MGRSConstants.NUM_BANDS {
+            bands -= 1
+        } else if !northern && bands > 0 && bandValue.truncatingRemainder(dividingBy: 1.0) == 0.0 {
+            bands -= 1
+        }
+
+        // Handle skipped 'I' and 'O' letters
+        if bands > 10 {
+            bands += 2
+        } else if bands > 5 {
+            bands += 1
+        }
+
+        var letter = Int(MGRSConstants.MIN_BAND_LETTER.asciiValue!)
+        letter += bands
+        return Character(UnicodeScalar(letter)!)
+    }
     
     /**
      * Is the zone number and band letter a Svalbard GZD (31X - 37X)
@@ -382,10 +466,10 @@ public class GridZones {
             var west = strip.west
             var east = strip.east
             let halfWidth = (east - west) / 2.0
-            if (number > 31) {
+            if number > 31 {
                 west -= halfWidth
             }
-            if (number < 37) {
+            if number < 37 {
                 east += halfWidth
             }
             svalbardStrip = LongitudinalStrip(number, west, east)
@@ -407,7 +491,7 @@ public class GridZones {
         let zoneValue = Double(MGRSConstants.MIN_SVALBARD_ZONE_NUMBER)
                 + ((longitude - minimumLongitude) / MGRSConstants.ZONE_WIDTH)
         var zone = Int(round(zoneValue))
-        if (zone % 2 == 0) {
+        if zone % 2 == 0 {
             zone -= 1
         }
         return zone
