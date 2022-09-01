@@ -403,8 +403,10 @@ public class MGRS {
 
         var mgrsValue: MGRS
 
-        var columnRow = mgrsString.substring(with: match.range(at: 3))
-        if columnRow.count > 0 {
+        let columnRowMatch = match.range(at: 3)
+        if columnRowMatch.length > 0 {
+            
+            var columnRow = mgrsString.substring(with: columnRowMatch)
 
             columnRow = columnRow.uppercased()
             let column = GridUtils.charAt(columnRow, 0)
@@ -413,8 +415,11 @@ public class MGRS {
             // parse easting & northing
             var easting = 0
             var northing = 0
-            let location = mgrsString.substring(with: match.range(at: 4))
-            if location.count > 0 {
+            let locationMatch = match.range(at: 4)
+            if locationMatch.length > 0 {
+                
+                let location = mgrsString.substring(with: locationMatch)
+                
                 let precision = location.count / 2
                 let multiplier = pow(10.0, 5.0 - Double(precision))
                 easting = Int(Double(GridUtils.substring(location, 0, precision))! * multiplier)
@@ -423,7 +428,7 @@ public class MGRS {
 
             mgrsValue = MGRS(zone, band, column, row, easting, northing)
 
-            if location.count > 0 {
+            if locationMatch.length > 0 {
 
                 let point = mgrsValue.toPoint().toDegrees()
                 let gridBounds = gridZone.bounds
@@ -583,8 +588,9 @@ public class MGRS {
             
             let mgrsString = mgrsValue as NSString
 
-            let location = mgrsString.substring(with: match.range(at: 4))
-            if location.count > 0 {
+            let locationMatch = match.range(at: 4)
+            if locationMatch.length > 0 {
+                let location = mgrsString.substring(with: locationMatch)
                 precision = GridType.withAccuracy(location.count / 2)
             } else {
                 precision = GridType.HUNDRED_KILOMETER
