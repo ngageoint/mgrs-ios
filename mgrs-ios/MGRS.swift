@@ -428,7 +428,7 @@ public class MGRS {
 
             mgrsValue = MGRS(zone, band, column, row, easting, northing)
 
-            if locationMatch.length > 0 {
+            if locationMatch.length == 0 {
 
                 let point = mgrsValue.toPoint().toDegrees()
                 let gridBounds = gridZone.bounds

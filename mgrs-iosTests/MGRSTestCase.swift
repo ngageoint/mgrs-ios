@@ -202,4 +202,81 @@ class MGRSTestCase: XCTestCase {
         
     }
     
+    /**
+     * Test parsing a 100k MGRS string value that falls outside grid zone bounds
+     */
+    func testParse100kBounds() {
+        
+        var mgrsValue = "32VJN"
+        XCTAssertTrue(MGRS.isMGRS(mgrsValue))
+        var mgrs = MGRS.parse(mgrsValue)
+        var point = mgrs.toPoint()
+        XCTAssertEqual(3.0, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(60.3007719, point.latitude, accuracy: 0.0001)
+        var comparePoint = MGRS.parse(mgrs.coordinate()).toPoint()
+        XCTAssertEqual(comparePoint.longitude, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(comparePoint.latitude, point.latitude, accuracy: 0.0001)
+        
+        mgrsValue = "32VKS"
+        XCTAssertTrue(MGRS.isMGRS(mgrsValue))
+        mgrs = MGRS.parse(mgrsValue)
+        point = mgrs.toPoint()
+        XCTAssertEqual(3.0, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(63.9024981, point.latitude, accuracy: 0.0001)
+        comparePoint = MGRS.parse(mgrs.coordinate()).toPoint()
+        XCTAssertEqual(comparePoint.longitude, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(comparePoint.latitude, point.latitude, accuracy: 0.0001)
+        
+        mgrsValue = "32VJR"
+        XCTAssertTrue(MGRS.isMGRS(mgrsValue))
+        mgrs = MGRS.parse(mgrsValue)
+        point = mgrs.toPoint()
+        XCTAssertEqual(3.0, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(63.0020546, point.latitude, accuracy: 0.0001)
+        comparePoint = MGRS.parse(mgrs.coordinate()).toPoint()
+        XCTAssertEqual(comparePoint.longitude, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(comparePoint.latitude, point.latitude, accuracy: 0.0001)
+        
+        mgrsValue = "32VJH"
+        XCTAssertTrue(MGRS.isMGRS(mgrsValue))
+        mgrs = MGRS.parse(mgrsValue)
+        point = mgrs.toPoint()
+        XCTAssertEqual(3.0, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(56.0, point.latitude, accuracy: 0.0001)
+        comparePoint = MGRS.parse(mgrs.coordinate()).toPoint()
+        XCTAssertEqual(comparePoint.longitude, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(comparePoint.latitude, point.latitude, accuracy: 0.0001)
+        
+        mgrsValue = "38KNU"
+        XCTAssertTrue(MGRS.isMGRS(mgrsValue))
+        mgrs = MGRS.parse(mgrsValue)
+        point = mgrs.toPoint()
+        XCTAssertEqual(45.0, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(-24.0, point.latitude, accuracy: 0.0001)
+        comparePoint = MGRS.parse(mgrs.coordinate()).toPoint()
+        XCTAssertEqual(comparePoint.longitude, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(comparePoint.latitude, point.latitude, accuracy: 0.0001)
+        
+        mgrsValue = "38KRU"
+        XCTAssertTrue(MGRS.isMGRS(mgrsValue))
+        mgrs = MGRS.parse(mgrsValue)
+        point = mgrs.toPoint()
+        XCTAssertEqual(47.9486444, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(-24.0, point.latitude, accuracy: 0.0001)
+        comparePoint = MGRS.parse(mgrs.coordinate()).toPoint()
+        XCTAssertEqual(comparePoint.longitude, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(comparePoint.latitude, point.latitude, accuracy: 0.0001)
+        
+        mgrsValue = "32VPH"
+        XCTAssertTrue(MGRS.isMGRS(mgrsValue))
+        mgrs = MGRS.parse(mgrsValue)
+        point = mgrs.toPoint()
+        XCTAssertEqual(10.6034691, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(56.0, point.latitude, accuracy: 0.0001)
+        comparePoint = MGRS.parse(mgrs.coordinate()).toPoint()
+        XCTAssertEqual(comparePoint.longitude, point.longitude, accuracy: 0.0001)
+        XCTAssertEqual(comparePoint.latitude, point.latitude, accuracy: 0.0001)
+        
+    }
+    
 }
