@@ -186,6 +186,9 @@ public class GridZones {
     public static func gridZone(_ zoneNumber: Int, _ bandLetter: Character) -> GridZone {
         MGRSUtils.validateZoneNumber(zoneNumber)
         MGRSUtils.validateBandLetter(bandLetter)
+        if gridZones.count == 0 {
+            initGridZones()
+        }
         return gridZones[zoneNumber]![bandLetter]!
     }
     

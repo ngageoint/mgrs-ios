@@ -197,7 +197,7 @@ public class MGRS {
      *            accuracy digits between 0 (inclusive) and 5 (inclusive)
      * @return MGRS coordinate
      */
-    public func coordinate(accuracy: Int) -> String {
+    public func coordinate(_ accuracy: Int) -> String {
         return coordinate(GridType.withAccuracy(accuracy))
     }
     
@@ -376,6 +376,189 @@ public class MGRS {
         
         return MGRS(utm.zone, bandLetter, columnLetter, rowLetter,
                 easting, northing)
+    }
+    
+    
+    /**
+     * Parse a MGRS string
+     *
+     * @param mgrs
+     *            MGRS string
+     * @return MGRS
+     */
+    public static func parse(_ mgrs: String) -> MGRS {
+        let mgrsNoSpaces = removeSpaces(mgrs)
+        let matches = mgrsExpression.matches(in: mgrsNoSpaces, range: NSMakeRange(0, mgrsNoSpaces.count))
+        if matches.count <= 0 {
+            preconditionFailure("Invalid MGRS: \(mgrs)")
+        }
+        
+        let match = matches[0]
+        let mgrsString = mgrsNoSpaces as NSString
+
+        let zone = Int(mgrsString.substring(with: match.range(at: 1)))!
+        let band = mgrsString.substring(with: match.range(at: 2)).uppercased().first!
+
+        let gridZone = GridZones.gridZone(zone, band)
+
+        var mgrsValue: MGRS
+
+        var columnRow = mgrsString.substring(with: match.range(at: 3))
+        if columnRow.count > 0 {
+
+            columnRow = columnRow.uppercased()
+            let column = GridUtils.charAt(columnRow, 0)
+            let row = GridUtils.charAt(columnRow, 1)
+
+            // parse easting & northing
+            var easting = 0
+            var northing = 0
+            let location = mgrsString.substring(with: match.range(at: 4))
+            if location.count > 0 {
+                let precision = location.count / 2
+                let multiplier = pow(10.0, 5.0 - Double(precision))
+                easting = Int(Double(GridUtils.substring(location, 0, precision))! * multiplier)
+                northing = Int(Double(GridUtils.substring(location, precision))! * multiplier)
+            }
+
+            mgrsValue = MGRS(zone, band, column, row, easting, northing)
+
+            if location.count > 0 {
+
+                let point = mgrsValue.toPoint().toDegrees()
+                let gridBounds = gridZone.bounds
+                let gridSouthwest = gridBounds.southwest.toDegrees()
+
+                let westBounds = point.longitude < gridSouthwest.longitude
+                let southBounds = point.latitude < gridSouthwest.latitude
+
+                if westBounds || southBounds {
+
+                    if westBounds && southBounds {
+                        let northeast = MGRS(zone, band, column, row,
+                                GridType.HUNDRED_KILOMETER.precision(),
+                                GridType.HUNDRED_KILOMETER.precision())
+                                .toPoint()
+                        if gridBounds.contains(northeast) {
+                            mgrsValue = from(
+                                    GridPoint.degrees(gridSouthwest.longitude,
+                                            gridSouthwest.latitude))
+                        }
+                    } else if westBounds {
+                        let east = MGRS(zone, band, column, row,
+                                GridType.HUNDRED_KILOMETER.precision(),
+                                northing)
+                                .toPoint()
+                        if gridBounds.contains(east) {
+                            let intersection = westernBoundsPoint(gridZone,
+                                    point, east)
+                            mgrsValue = from(intersection)
+                        }
+                    } else if southBounds {
+                        let north = MGRS(zone, band, column, row,
+                                easting,
+                                GridType.HUNDRED_KILOMETER.precision())
+                                .toPoint();
+                        if gridBounds.contains(north) {
+                            let intersection = southernBoundsPoint(
+                                    gridZone, point, north)
+                            mgrsValue = from(intersection)
+                        }
+                    }
+
+                }
+
+            }
+
+        } else {
+            mgrsValue = from(gridZone.bounds.southwest)
+        }
+
+        return mgrsValue
+    }
+
+    /**
+     * Get the point on the western grid zone bounds point between the western
+     * and eastern points
+     *
+     * @param gridZone
+     *            grid zone
+     * @param west
+     *            western point
+     * @param east
+     *            eastern point
+     * @return western grid bounds point
+     */
+    private static func westernBoundsPoint(_ gridZone: GridZone, _ west: GridPoint,
+            _ east: GridPoint) -> GridPoint {
+
+        let eastUTM = UTM.from(east)
+        let northing = eastUTM.northing
+
+        let zoneNumber = gridZone.number()
+        let hemisphere = gridZone.hemisphere()
+
+        let line = Line(west, east)
+        let boundsLine = gridZone.bounds.westLine()
+
+        let intersection = line.intersection(boundsLine)!
+
+        // Intersection easting
+        let intersectionUTM = UTM.from(intersection, zoneNumber, hemisphere)
+        let intersectionEasting = intersectionUTM.easting
+
+        // One meter precision just inside the bounds
+        let boundsEasting = ceil(intersectionEasting)
+
+        // Higher precision point just inside of the bounds
+        let boundsPoint = UTM.point(zoneNumber, hemisphere, boundsEasting,
+                northing)
+
+        boundsPoint.longitude = boundsLine.point1.longitude
+
+        return boundsPoint
+    }
+
+    /**
+     * Get the point on the southern grid zone bounds point between the southern
+     * and northern points
+     *
+     * @param gridZone
+     *            grid zone
+     * @param south
+     *            southern point
+     * @param north
+     *            northern point
+     * @return southern grid bounds point
+     */
+    private static func southernBoundsPoint(_ gridZone: GridZone, _ south: GridPoint,
+                                               _ north: GridPoint) -> GridPoint {
+
+        let northUTM = UTM.from(north)
+        let easting = northUTM.easting
+
+        let zoneNumber = gridZone.number()
+        let hemisphere = gridZone.hemisphere()
+
+        let line = Line(south, north)
+        let boundsLine = gridZone.bounds.southLine()
+
+        let intersection = line.intersection(boundsLine)!
+
+        // Intersection northing
+        let intersectionUTM = UTM.from(intersection, zoneNumber, hemisphere)
+        let intersectionNorthing = intersectionUTM.northing
+
+        // One meter precision just inside the bounds
+        let boundsNorthing = ceil(intersectionNorthing)
+
+        // Higher precision point just inside of the bounds
+        let boundsPoint = UTM.point(zoneNumber, hemisphere, easting,
+                boundsNorthing)
+
+        boundsPoint.latitude = boundsLine.point1.latitude
+
+        return boundsPoint
     }
     
     /**

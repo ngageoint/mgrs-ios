@@ -122,6 +122,7 @@ public class UTM {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 2
+        formatter.usesGroupingSeparator = false
         
         return String(format: "%02d", zone)
             + " "
