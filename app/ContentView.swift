@@ -70,6 +70,7 @@ class MapState {
 
     init() {
         let grids = Grids()
+        grids.setLabelMinZoom(GridType.GZD, 3)
         tileOverlay = MGRSTileOverlay(grids)
     }
 
