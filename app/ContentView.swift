@@ -20,11 +20,11 @@ struct ContentView: View {
         VStack {
             MapView(mapState, coordinate)
             HStack {
-                Text(coordinate.mgrsLabel).font(.subheadline)
+                Text(coordinate.mgrsLabel).font(.footnote)
                 Spacer()
-                Text(coordinate.wgs84Label).font(.subheadline)
+                Text(coordinate.wgs84Label).font(.footnote)
                 Spacer()
-                Text(coordinate.zoomLabel).font(.subheadline)
+                Text(coordinate.zoomLabel).font(.footnote)
                 Button(action: {
                     withAnimation {
                         self.isShowingSearch.toggle()
