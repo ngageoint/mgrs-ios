@@ -11,7 +11,7 @@ import grid_ios
 /**
  * Military Grid Reference System Coordinate
  */
-public class MGRS {
+public class MGRS: Hashable {
     
     /**
      * 100km grid square column (‘e’) letters repeat every third zone
@@ -326,6 +326,24 @@ public class MGRS {
     
     public var description: String {
         return coordinate()
+    }
+    
+    public static func == (lhs: MGRS, rhs: MGRS) -> Bool {
+        return lhs.zone == rhs.zone
+            && lhs.band == rhs.band
+            && lhs.column == rhs.column
+            && lhs.row == rhs.row
+            && lhs.easting == rhs.easting
+            && lhs.northing == rhs.northing
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(zone)
+        hasher.combine(band)
+        hasher.combine(column)
+        hasher.combine(row)
+        hasher.combine(easting)
+        hasher.combine(northing)
     }
     
     /**
