@@ -277,16 +277,16 @@ public class Grid: BaseGrid {
         return labels
     }
     
-    public static func == (lhs: Grid, rhs: Grid) -> Bool {
-        return lhs.type == rhs.type
+    public override func equals(_ grid: BaseGrid) -> Bool {
+        return type == (grid as! Grid).type
     }
     
     public override func hash(into hasher: inout Hasher) {
         hasher.combine(type)
     }
     
-    public static func < (lhs: Grid, rhs: Grid) -> Bool {
-        return lhs.precisionCompare() <= rhs.precisionCompare()
+    public override func compare(_ grid: BaseGrid) -> Bool {
+        return precisionCompare() <= (grid as! Grid).precisionCompare()
     }
     
     /**
