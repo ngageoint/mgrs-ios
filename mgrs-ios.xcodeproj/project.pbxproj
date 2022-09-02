@@ -13,6 +13,14 @@
 		04DADAC128C1235A0068F52C /* BandLetterRangeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAC028C1235A0068F52C /* BandLetterRangeTestCase.swift */; };
 		04DADAC328C12BC90068F52C /* GridZonesTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAC228C12BC90068F52C /* GridZonesTestCase.swift */; };
 		04DADAC528C147690068F52C /* MGRSTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAC428C147690068F52C /* MGRSTestCase.swift */; };
+		04DADAC728C238640068F52C /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAC628C238640068F52C /* Grid.swift */; };
+		04DADAC928C2387B0068F52C /* GridLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAC828C2387B0068F52C /* GridLabel.swift */; };
+		04DADACB28C238AD0068F52C /* GridLabeler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADACA28C238AD0068F52C /* GridLabeler.swift */; };
+		04DADACD28C238BE0068F52C /* Grids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADACC28C238BE0068F52C /* Grids.swift */; };
+		04DADACF28C238D30068F52C /* MGRSLabeler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADACE28C238D30068F52C /* MGRSLabeler.swift */; };
+		04DADAD128C238E60068F52C /* ZoomGrids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAD028C238E60068F52C /* ZoomGrids.swift */; };
+		04DADAD328C239250068F52C /* GZDLabeler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAD228C239250068F52C /* GZDLabeler.swift */; };
+		04DADAD628C23A330068F52C /* MGRSTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAD528C23A330068F52C /* MGRSTileOverlay.swift */; };
 		04EF1DC928B4E69100760ED1 /* GridType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DC828B4E69100760ED1 /* GridType.swift */; };
 		04EF1DCC28B4EE7600760ED1 /* GridLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DCB28B4EE7600760ED1 /* GridLine.swift */; };
 		04EF1DCE28B4EFFD00760ED1 /* MGRSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DCD28B4EFFD00760ED1 /* MGRSConstants.swift */; };
@@ -57,6 +65,14 @@
 		04DADAC028C1235A0068F52C /* BandLetterRangeTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandLetterRangeTestCase.swift; sourceTree = "<group>"; };
 		04DADAC228C12BC90068F52C /* GridZonesTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridZonesTestCase.swift; sourceTree = "<group>"; };
 		04DADAC428C147690068F52C /* MGRSTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSTestCase.swift; sourceTree = "<group>"; };
+		04DADAC628C238640068F52C /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		04DADAC828C2387B0068F52C /* GridLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLabel.swift; sourceTree = "<group>"; };
+		04DADACA28C238AD0068F52C /* GridLabeler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLabeler.swift; sourceTree = "<group>"; };
+		04DADACC28C238BE0068F52C /* Grids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grids.swift; sourceTree = "<group>"; };
+		04DADACE28C238D30068F52C /* MGRSLabeler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSLabeler.swift; sourceTree = "<group>"; };
+		04DADAD028C238E60068F52C /* ZoomGrids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomGrids.swift; sourceTree = "<group>"; };
+		04DADAD228C239250068F52C /* GZDLabeler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GZDLabeler.swift; sourceTree = "<group>"; };
+		04DADAD528C23A330068F52C /* MGRSTileOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSTileOverlay.swift; sourceTree = "<group>"; };
 		04EF1DC828B4E69100760ED1 /* GridType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridType.swift; sourceTree = "<group>"; };
 		04EF1DCB28B4EE7600760ED1 /* GridLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLine.swift; sourceTree = "<group>"; };
 		04EF1DCD28B4EFFD00760ED1 /* MGRSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSConstants.swift; sourceTree = "<group>"; };
@@ -154,6 +170,7 @@
 				04EF1DC728B4E66E00760ED1 /* grid */,
 				04EF1DD528B5079E00760ED1 /* gzd */,
 				04EF1DD128B5037000760ED1 /* property */,
+				04DADAD428C23A150068F52C /* tile */,
 				04EF1DD428B5078D00760ED1 /* utm */,
 				04F520F028A2F4FA004C6D8C /* mgrs.plist */,
 			);
@@ -188,10 +205,24 @@
 			path = gzd;
 			sourceTree = "<group>";
 		};
+		04DADAD428C23A150068F52C /* tile */ = {
+			isa = PBXGroup;
+			children = (
+				04DADAD528C23A330068F52C /* MGRSTileOverlay.swift */,
+			);
+			path = tile;
+			sourceTree = "<group>";
+		};
 		04EF1DC728B4E66E00760ED1 /* grid */ = {
 			isa = PBXGroup;
 			children = (
+				04DADAC628C238640068F52C /* Grid.swift */,
+				04DADAC828C2387B0068F52C /* GridLabel.swift */,
+				04DADACA28C238AD0068F52C /* GridLabeler.swift */,
+				04DADACC28C238BE0068F52C /* Grids.swift */,
 				04EF1DC828B4E69100760ED1 /* GridType.swift */,
+				04DADACE28C238D30068F52C /* MGRSLabeler.swift */,
+				04DADAD028C238E60068F52C /* ZoomGrids.swift */,
 			);
 			path = grid;
 			sourceTree = "<group>";
@@ -227,6 +258,7 @@
 				04EF1DE028B54C2700760ED1 /* GridRange.swift */,
 				04EF1DE228B5514100760ED1 /* GridZone.swift */,
 				04EF1DE828B65FE100760ED1 /* GridZones.swift */,
+				04DADAD228C239250068F52C /* GZDLabeler.swift */,
 				04EF1DE628B5559F00760ED1 /* LatitudeBand.swift */,
 				04EF1DE428B551F100760ED1 /* LongitudinalStrip.swift */,
 				04EF1DDE28B547BF00760ED1 /* ZoneNumberRange.swift */,
@@ -528,19 +560,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DADAD128C238E60068F52C /* ZoomGrids.swift in Sources */,
+				04DADAC928C2387B0068F52C /* GridLabel.swift in Sources */,
+				04DADACB28C238AD0068F52C /* GridLabeler.swift in Sources */,
 				04EF1DD028B4F31F00760ED1 /* MGRSUtils.swift in Sources */,
 				04EF1DD928B5237400760ED1 /* MGRS.swift in Sources */,
 				04EF1DDF28B547BF00760ED1 /* ZoneNumberRange.swift in Sources */,
 				04EF1DE128B54C2700760ED1 /* GridRange.swift in Sources */,
 				04EF1DDB28B5437400760ED1 /* BandLetterRange.swift in Sources */,
+				04DADACD28C238BE0068F52C /* Grids.swift in Sources */,
 				04EF1DCE28B4EFFD00760ED1 /* MGRSConstants.swift in Sources */,
 				04EF1DD728B5131E00760ED1 /* UTM.swift in Sources */,
+				04DADACF28C238D30068F52C /* MGRSLabeler.swift in Sources */,
 				04EF1DD328B5038400760ED1 /* MGRSProperties.swift in Sources */,
+				04DADAD628C23A330068F52C /* MGRSTileOverlay.swift in Sources */,
+				04DADAC728C238640068F52C /* Grid.swift in Sources */,
 				04EF1DE328B5514100760ED1 /* GridZone.swift in Sources */,
 				04EF1DC928B4E69100760ED1 /* GridType.swift in Sources */,
 				04EF1DE528B551F100760ED1 /* LongitudinalStrip.swift in Sources */,
 				04EF1DE728B5559F00760ED1 /* LatitudeBand.swift in Sources */,
 				04EF1DCC28B4EE7600760ED1 /* GridLine.swift in Sources */,
+				04DADAD328C239250068F52C /* GZDLabeler.swift in Sources */,
 				04EF1DE928B65FE100760ED1 /* GridZones.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
