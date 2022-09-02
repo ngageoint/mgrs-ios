@@ -28,7 +28,20 @@ public class GridZones {
      */
     public static var gridZones: [Int: [Character: GridZone]] = [:]
     
+    private static var initialized = false
+    
+    private static let semaphore = DispatchSemaphore(value: 1)
+    
     private static func initGridZones() {
+        semaphore.wait()
+        if !initialized {
+            initialize()
+            initialized = true
+        }
+        semaphore.signal()
+    }
+    
+    private static func initialize() {
         
         // Create longitudinal strips
         let numberRange = ZoneNumberRange()
@@ -90,7 +103,7 @@ public class GridZones {
      */
     public static func longitudinalStrip(_ zoneNumber: Int) -> LongitudinalStrip {
         MGRSUtils.validateZoneNumber(zoneNumber)
-        if strips.count == 0 {
+        if !initialized {
             initGridZones()
         }
         return strips[zoneNumber]!
@@ -127,7 +140,7 @@ public class GridZones {
      */
     public static func latitudeBand(_ bandLetter: Character) -> LatitudeBand {
         MGRSUtils.validateBandLetter(bandLetter)
-        if bands.count == 0 {
+        if !initialized {
             initGridZones()
         }
         return bands[bandLetter]!
@@ -186,7 +199,7 @@ public class GridZones {
     public static func gridZone(_ zoneNumber: Int, _ bandLetter: Character) -> GridZone? {
         MGRSUtils.validateZoneNumber(zoneNumber)
         MGRSUtils.validateBandLetter(bandLetter)
-        if gridZones.count == 0 {
+        if !initialized {
             initGridZones()
         }
         return gridZones[zoneNumber]![bandLetter]
