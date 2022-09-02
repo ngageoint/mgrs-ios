@@ -97,12 +97,12 @@ public struct GridRangeIterator: IteratorProtocol {
 
                 // Retrieve the western grid if on the left edge
                 if zoneNumber == minZoneNumber {
-                    additional.append(GridZones.gridZone(zoneNumber - 1, bandLetter))
+                    additional.append(GridZones.gridZone(zoneNumber - 1, bandLetter)!)
                 }
 
                 // Expand to the eastern grid if on the right edge
                 if zoneNumber == maxZoneNumber {
-                    additional.append(GridZones.gridZone(zoneNumber + 1, bandLetter))
+                    additional.append(GridZones.gridZone(zoneNumber + 1, bandLetter)!)
                 }
 
             } else {
@@ -113,7 +113,7 @@ public struct GridRangeIterator: IteratorProtocol {
                     if expand > 0 {
                         for expandZone in stride(from: zoneNumber + expand, to: zoneNumber, by: -1) {
                             if expandZone > maxZoneNumber {
-                                additional.append(GridZones.gridZone(expandZone, bandLetter))
+                                additional.append(GridZones.gridZone(expandZone, bandLetter)!)
                             } else {
                                 break
                             }
@@ -121,7 +121,7 @@ public struct GridRangeIterator: IteratorProtocol {
                     } else {
                         for expandZone in zoneNumber + expand ..< zoneNumber {
                             if expandZone < minZoneNumber {
-                                additional.append(GridZones.gridZone(expandZone, bandLetter))
+                                additional.append(GridZones.gridZone(expandZone, bandLetter)!)
                             } else {
                                 break
                             }

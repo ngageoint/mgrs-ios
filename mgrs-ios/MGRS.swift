@@ -247,7 +247,7 @@ public class MGRS {
      *
      * @return GZD grid zone
      */
-    public func gridZone() -> GridZone {
+    public func gridZone() -> GridZone? {
         return GridZones.gridZone(self)
     }
     
@@ -400,6 +400,9 @@ public class MGRS {
         let band = mgrsString.substring(with: match.range(at: 2)).uppercased().first!
 
         let gridZone = GridZones.gridZone(zone, band)
+        if gridZone == nil {
+            preconditionFailure("Invalid MGRS: \(mgrs)")
+        }
 
         var mgrsValue: MGRS
 
@@ -431,7 +434,7 @@ public class MGRS {
             if locationMatch.length == 0 {
 
                 let point = mgrsValue.toPoint().toDegrees()
-                let gridBounds = gridZone.bounds
+                let gridBounds = gridZone!.bounds
                 let gridSouthwest = gridBounds.southwest.toDegrees()
 
                 let westBounds = point.longitude < gridSouthwest.longitude
@@ -455,7 +458,7 @@ public class MGRS {
                                 northing)
                                 .toPoint()
                         if gridBounds.contains(east) {
-                            let intersection = westernBoundsPoint(gridZone,
+                            let intersection = westernBoundsPoint(gridZone!,
                                     point, east)
                             mgrsValue = from(intersection)
                         }
@@ -463,10 +466,10 @@ public class MGRS {
                         let north = MGRS(zone, band, column, row,
                                 easting,
                                 GridType.HUNDRED_KILOMETER.precision())
-                                .toPoint();
+                                .toPoint()
                         if gridBounds.contains(north) {
                             let intersection = southernBoundsPoint(
-                                    gridZone, point, north)
+                                    gridZone!, point, north)
                             mgrsValue = from(intersection)
                         }
                     }
@@ -476,7 +479,7 @@ public class MGRS {
             }
 
         } else {
-            mgrsValue = from(gridZone.bounds.southwest)
+            mgrsValue = from(gridZone!.bounds.southwest)
         }
 
         return mgrsValue

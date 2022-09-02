@@ -183,13 +183,13 @@ public class GridZones {
      *            band letter
      * @return grid zone
      */
-    public static func gridZone(_ zoneNumber: Int, _ bandLetter: Character) -> GridZone {
+    public static func gridZone(_ zoneNumber: Int, _ bandLetter: Character) -> GridZone? {
         MGRSUtils.validateZoneNumber(zoneNumber)
         MGRSUtils.validateBandLetter(bandLetter)
         if gridZones.count == 0 {
             initGridZones()
         }
-        return gridZones[zoneNumber]![bandLetter]!
+        return gridZones[zoneNumber]![bandLetter]
     }
     
     /**
@@ -199,7 +199,7 @@ public class GridZones {
      *            mgrs coordinate
      * @return grid zone
      */
-    public static func gridZone(_ mgrs: MGRS) -> GridZone {
+    public static func gridZone(_ mgrs: MGRS) -> GridZone? {
         return gridZone(mgrs.zone, mgrs.band)
     }
     
