@@ -133,7 +133,7 @@ class ReadmeTestCase: XCTestCase {
         
         grids.disable(GridType.METER)
         
-        grids.enableLabeler(GridTYpe.TEN_KILOMETER)
+        grids.enableLabeler(GridType.TEN_KILOMETER)
         
         let tileOverlay = MGRSTileOverlay(grids)
 
