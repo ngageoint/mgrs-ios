@@ -55,8 +55,6 @@ class ReadmeTestCase: XCTestCase {
      */
     func testTileOverlay() {
         
-        /* TODO
-        
         // let mapView: MKMapView = ...
 
         // Tile size determined from display density
@@ -74,15 +72,12 @@ class ReadmeTestCase: XCTestCase {
 
         //mapView.addOverlay(tileOverlay)
         
-         */
     }
     
     /**
      * Test tile provider options
      */
     func testOptions() {
-
-        /* TODO
         
         let tileOverlay = MGRSTileOverlay()
 
@@ -111,7 +106,6 @@ class ReadmeTestCase: XCTestCase {
         let mgrs10m = tileOverlay.coordinate(locationCoordinate, GridType.TEN_METER)
         let mgrs1m = tileOverlay.coordinate(locationCoordinate, GridType.METER)
         
-         */
     }
     
     /**

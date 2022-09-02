@@ -24,6 +24,15 @@ public class Grids: BaseGrids {
     private var typeGrids: [GridType: Grid] = [:]
     
     /**
+     * Create only Grid Zone Designator grids
+     *
+     * @return grids
+     */
+    public static func createGZD() -> Grids {
+        return Grids([GridType.GZD])
+    }
+    
+    /**
      * Initialize, all grid types enabled per property configurations
      */
     public init() {
