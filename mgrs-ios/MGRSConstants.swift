@@ -113,4 +113,9 @@ public struct MGRSConstants {
      */
     public static let NORWAY_BAND_LETTER: Character = "V"
     
+    /**
+     * Grid zoom display offset from XYZ tile zoom levels
+     */
+    public static let ZOOM_OFFSET = -1
+    
 }

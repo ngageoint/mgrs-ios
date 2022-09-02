@@ -118,8 +118,6 @@ class ReadmeTestCase: XCTestCase {
      * Test custom grids
      */
     func testCustomGrids() {
-
-        /* TODO
         
         let grids = Grids()
 
@@ -145,7 +143,6 @@ class ReadmeTestCase: XCTestCase {
         
         let tileOverlay = MGRSTileOverlay(grids)
 
-         */
     }
     
     /**
@@ -164,8 +161,6 @@ class ReadmeTestCase: XCTestCase {
     private static func testDrawTile(_ tile: GridTile) {
         
         // let tile: GridTile = ...
-
-        /* TODO
         
         let grids = Grids()
 
@@ -201,8 +196,6 @@ class ReadmeTestCase: XCTestCase {
                 }
             }
         }
-        
-        */
          
     }
     
