@@ -806,7 +806,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43F6D866DB2D2299E81BE1D4 /* Pods-mgrs-ios-mgrs-iosTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -830,7 +829,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E9E5249E3C73D594F06BCAF /* Pods-mgrs-ios-mgrs-iosTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
