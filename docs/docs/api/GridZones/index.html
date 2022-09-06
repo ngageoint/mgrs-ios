@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mgrs-ios 1.0.0 - GridZones</title>
+    <link rel="stylesheet" type="text/css" href="https://ngageoint.github.io/mgrs-ios/docs/api/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://ngageoint.github.io/mgrs-ios/docs/api/">
+            <strong>
+                mgrs-ios 1.0.0
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#gridzones.strips">strips</a></li><li class="variable"><a href="#gridzones.bands">bands</a></li><li class="variable"><a href="#gridzones.gridzones">grid​Zones</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#gridzones.longitudinalstrip(_:)">longitudinal​Strip(_:​)</a></li><li class="function"><a href="#gridzones.westlongitude(_:)">west​Longitude(_:​)</a></li><li class="function"><a href="#gridzones.eastlongitude(_:)">east​Longitude(_:​)</a></li><li class="function"><a href="#gridzones.latitudeband(_:)">latitude​Band(_:​)</a></li><li class="function"><a href="#gridzones.southlatitude(_:)">south​Latitude(_:​)</a></li><li class="function"><a href="#gridzones.northlatitude(_:)">north​Latitude(_:​)</a></li><li class="function"><a href="#gridzones.zones(_:)">zones(_:​)</a></li><li class="function"><a href="#gridzones.gridzone(_:_:)">grid​Zone(_:​_:​)</a></li><li class="function"><a href="#gridzones.gridzone(_:)">grid​Zone(_:​)</a></li><li class="function"><a href="#gridzones.gridrange(_:)">grid​Range(_:​)</a></li><li class="function"><a href="#gridzones.zonenumberrange(_:)">zone​Number​Range(_:​)</a></li><li class="function"><a href="#gridzones.zonenumberrange(_:_:)">zone​Number​Range(_:​_:​)</a></li><li class="function"><a href="#gridzones.zonenumber(_:)">zone​Number(_:​)</a></li><li class="function"><a href="#gridzones.zonenumber(_:_:)">zone​Number(_:​_:​)</a></li><li class="function"><a href="#gridzones.zonenumber(_:)">zone​Number(_:​)</a></li><li class="function"><a href="#gridzones.zonenumber(_:_:)">zone​Number(_:​_:​)</a></li><li class="function"><a href="#gridzones.bandletterrange(_:)">band​Letter​Range(_:​)</a></li><li class="function"><a href="#gridzones.bandletterrange(_:_:)">band​Letter​Range(_:​_:​)</a></li><li class="function"><a href="#gridzones.bandletter(_:)">band​Letter(_:​)</a></li><li class="function"><a href="#gridzones.bandletter(_:_:)">band​Letter(_:​_:​)</a></li><li class="function"><a href="#gridzones.issvalbard(_:_:)">is​Svalbard(_:​_:​)</a></li><li class="function"><a href="#gridzones.issvalbardletter(_:)">is​Svalbard​Letter(_:​)</a></li><li class="function"><a href="#gridzones.issvalbardzone(_:)">is​Svalbard​Zone(_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Grid​Zones</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">GridZones</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Grid Zones, Longitudinal Strips, and Latitude Bands</li>
+</ul>
+
+</div>
+
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="gridzones.strips">
+    <h3>
+        <code><a href="#gridzones.strips">strips</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">strips</span>: [<span class="type">Int</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/LongitudinalStrip"><span class="type">LongitudinalStrip</span></a>] = [:] </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Longitudinal Strips</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="variable" id="gridzones.bands">
+    <h3>
+        <code><a href="#gridzones.bands">bands</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">bands</span>: [<span class="type">Character</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/LatitudeBand"><span class="type">LatitudeBand</span></a>] = [:] </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Latitude Bands</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="variable" id="gridzones.gridzones">
+    <h3>
+        <code><a href="#gridzones.gridzones">grid​Zones</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">gridZones</span>: [<span class="type">Int</span>: [<span class="type">Character</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridZone"><span class="type">GridZone</span></a>]] = [:] </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Grid Zones</li>
+</ul>
+
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="gridzones.longitudinalstrip(_:)">
+    <h3>
+        <code><a href="#gridzones.longitudinalstrip(_:)">longitudinal​Strip(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">longitudinalStrip</span>(<span class="keyword">_</span> <span class="variable">zoneNumber</span>: <span class="type">Int</span>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/LongitudinalStrip"><span class="type">LongitudinalStrip</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the longitudinal strip by zone number</li>
+<li></li>
+<li>@param zoneNumber</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+<li>@return longitudinal strip</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.westlongitude(_:)">
+    <h3>
+        <code><a href="#gridzones.westlongitude(_:)">west​Longitude(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">westLongitude</span>(<span class="keyword">_</span> <span class="variable">zoneNumber</span>: <span class="type">Int</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the west longitude in degrees of the zone number</li>
+<li></li>
+<li>@param zoneNumber</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+<li>@return longitude in degrees</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.eastlongitude(_:)">
+    <h3>
+        <code><a href="#gridzones.eastlongitude(_:)">east​Longitude(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">eastLongitude</span>(<span class="keyword">_</span> <span class="variable">zoneNumber</span>: <span class="type">Int</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the east longitude in degrees of the zone number</li>
+<li></li>
+<li>@param zoneNumber</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+<li>@return longitude in degrees</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.latitudeband(_:)">
+    <h3>
+        <code><a href="#gridzones.latitudeband(_:)">latitude​Band(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">latitudeBand</span>(<span class="keyword">_</span> <span class="variable">bandLetter</span>: <span class="type">Character</span>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/LatitudeBand"><span class="type">LatitudeBand</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the latitude band by band letter</li>
+<li></li>
+<li>@param bandLetter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+<li>@return latitude band</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.southlatitude(_:)">
+    <h3>
+        <code><a href="#gridzones.southlatitude(_:)">south​Latitude(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">southLatitude</span>(<span class="keyword">_</span> <span class="variable">bandLetter</span>: <span class="type">Character</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the south latitude in degrees of the band letter</li>
+<li></li>
+<li>@param bandLetter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+<li>@return latitude in degrees</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.northlatitude(_:)">
+    <h3>
+        <code><a href="#gridzones.northlatitude(_:)">north​Latitude(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">northLatitude</span>(<span class="keyword">_</span> <span class="variable">bandLetter</span>: <span class="type">Character</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the north latitude in degrees of the band letter</li>
+<li></li>
+<li>@param bandLetter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+<li>@return latitude in degrees</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.zones(_:)">
+    <h3>
+        <code><a href="#gridzones.zones(_:)">zones(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">zones</span>(<span class="keyword">_</span> <span class="variable">bounds</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>) -&gt; [<a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridZone"><span class="type">GridZone</span></a>]  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the zones within the bounds</li>
+<li></li>
+<li>@param bounds</li>
+<li>
+<pre><code>       bounds
+</code></pre>
+</li>
+<li>@return grid zones</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.gridzone(_:_:)">
+    <h3>
+        <code><a href="#gridzones.gridzone(_:_:)">grid​Zone(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">gridZone</span>(<span class="keyword">_</span> <span class="variable">zoneNumber</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">bandLetter</span>: <span class="type">Character</span>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridZone"><span class="type">GridZone</span></a>?  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the grid zone by zone number and band letter</li>
+<li></li>
+<li>@param zoneNumber</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+<li>@param bandLetter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+<li>@return grid zone</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.gridzone(_:)">
+    <h3>
+        <code><a href="#gridzones.gridzone(_:)">grid​Zone(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">gridZone</span>(<span class="keyword">_</span> <span class="variable">mgrs</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/MGRS"><span class="type">MGRS</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridZone"><span class="type">GridZone</span></a>?  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the grid zone by MGRS</li>
+<li></li>
+<li>@param mgrs</li>
+<li>
+<pre><code>       mgrs coordinate
+</code></pre>
+</li>
+<li>@return grid zone</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.gridrange(_:)">
+    <h3>
+        <code><a href="#gridzones.gridrange(_:)">grid​Range(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">gridRange</span>(<span class="keyword">_</span> <span class="variable">bounds</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridRange"><span class="type">GridRange</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get a grid range from the bounds</li>
+<li></li>
+<li>@param bounds</li>
+<li>
+<pre><code>       bounds
+</code></pre>
+</li>
+<li>@return grid range</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.zonenumberrange(_:)">
+    <h3>
+        <code><a href="#gridzones.zonenumberrange(_:)">zone​Number​Range(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">zoneNumberRange</span>(<span class="keyword">_</span> <span class="variable">bounds</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/ZoneNumberRange"><span class="type">ZoneNumberRange</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get a zone number range between the western and eastern bounds</li>
+<li></li>
+<li>@param bounds</li>
+<li>
+<pre><code>       bounds
+</code></pre>
+</li>
+<li>@return zone number range</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.zonenumberrange(_:_:)">
+    <h3>
+        <code><a href="#gridzones.zonenumberrange(_:_:)">zone​Number​Range(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">zoneNumberRange</span>(<span class="keyword">_</span> <span class="variable">west</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">east</span>: <span class="type">Double</span>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/ZoneNumberRange"><span class="type">ZoneNumberRange</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get a zone number range between the western and eastern longitudes</li>
+<li></li>
+<li>@param west</li>
+<li>
+<pre><code>       western longitude in degrees
+</code></pre>
+</li>
+<li>@param east</li>
+<li>
+<pre><code>       eastern longitude in degrees
+</code></pre>
+</li>
+<li>@return zone number range</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.zonenumber(_:)">
+    <h3>
+        <code><a href="#gridzones.zonenumber(_:)">zone​Number(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">zoneNumber</span>(<span class="keyword">_</span> <span class="variable">point</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>) -&gt; <span class="type">Int</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the zone number of the point</li>
+<li></li>
+<li>@param point</li>
+<li>
+<pre><code>       point
+</code></pre>
+</li>
+<li>@return zone number</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.zonenumber(_:_:)">
+    <h3>
+        <code><a href="#gridzones.zonenumber(_:_:)">zone​Number(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">zoneNumber</span>(<span class="keyword">_</span> <span class="variable">longitude</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">latitude</span>: <span class="type">Double</span>) -&gt; <span class="type">Int</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the zone number of the longitude and latitude</li>
+<li></li>
+<li>@param longitude</li>
+<li>
+<pre><code>       longitude
+</code></pre>
+</li>
+<li>@param latitude</li>
+<li>
+<pre><code>       latitude
+</code></pre>
+</li>
+<li>@return zone number</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.zonenumber(_:)">
+    <h3>
+        <code><a href="#gridzones.zonenumber(_:)">zone​Number(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">zoneNumber</span>(<span class="keyword">_</span> <span class="variable">longitude</span>: <span class="type">Double</span>) -&gt; <span class="type">Int</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the zone number of the longitude (degrees between</li>
+<li>MGRSConstants.MIN_LON and MGRSConstants.MAX_LON). Eastern</li>
+<li>zone number on borders.</li>
+<li></li>
+<li>@param longitude</li>
+<li>
+<pre><code>       longitude in degrees
+</code></pre>
+</li>
+<li>@return zone number</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.zonenumber(_:_:)">
+    <h3>
+        <code><a href="#gridzones.zonenumber(_:_:)">zone​Number(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">zoneNumber</span>(<span class="keyword">_</span> <span class="variable">longitude</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">eastern</span>: <span class="type">Bool</span>) -&gt; <span class="type">Int</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the zone number of the longitude (degrees between</li>
+<li>MGRSConstants.MIN_LON and MGRSConstants.MAX_LON)</li>
+<li></li>
+<li>@param longitude</li>
+<li>
+<pre><code>       longitude in degrees
+</code></pre>
+</li>
+<li>@param eastern</li>
+<li>
+<pre><code>       true for eastern number on edges, false for western
+</code></pre>
+</li>
+<li>@return zone number</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.bandletterrange(_:)">
+    <h3>
+        <code><a href="#gridzones.bandletterrange(_:)">band​Letter​Range(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">bandLetterRange</span>(<span class="keyword">_</span> <span class="variable">bounds</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/BandLetterRange"><span class="type">BandLetterRange</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get a band letter range between the southern and northern bounds</li>
+<li></li>
+<li>@param bounds</li>
+<li>
+<pre><code>       bounds
+</code></pre>
+</li>
+<li>@return band letter range</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.bandletterrange(_:_:)">
+    <h3>
+        <code><a href="#gridzones.bandletterrange(_:_:)">band​Letter​Range(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">bandLetterRange</span>(<span class="keyword">_</span> <span class="variable">south</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">north</span>: <span class="type">Double</span>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/BandLetterRange"><span class="type">BandLetterRange</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get a band letter range between the southern and northern latitudes in</li>
+<li>degrees</li>
+<li></li>
+<li>@param south</li>
+<li>
+<pre><code>       southern latitude in degrees
+</code></pre>
+</li>
+<li>@param north</li>
+<li>
+<pre><code>       northern latitude in degrees
+</code></pre>
+</li>
+<li>@return band letter range</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.bandletter(_:)">
+    <h3>
+        <code><a href="#gridzones.bandletter(_:)">band​Letter(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">bandLetter</span>(<span class="keyword">_</span> <span class="variable">latitude</span>: <span class="type">Double</span>) -&gt; <span class="type">Character</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the band letter of the latitude (degrees between</li>
+<li>MGRSConstants.MIN_LAT and MGRSConstants.MAX_LAT).</li>
+<li>Northern band letter on borders.</li>
+<li></li>
+<li>@param latitude</li>
+<li>
+<pre><code>       latitude in degrees
+</code></pre>
+</li>
+<li>@return band letter</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.bandletter(_:_:)">
+    <h3>
+        <code><a href="#gridzones.bandletter(_:_:)">band​Letter(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">bandLetter</span>(<span class="keyword">_</span> <span class="variable">latitude</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">northern</span>: <span class="type">Bool</span>) -&gt; <span class="type">Character</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the band letter of the latitude (degrees between</li>
+<li>MGRSConstants.MIN_LAT and MGRSConstants.MAX_LAT)</li>
+<li></li>
+<li>@param latitude</li>
+<li>
+<pre><code>       latitude in degrees
+</code></pre>
+</li>
+<li>@param northern</li>
+<li>
+<pre><code>       true for northern band on edges, false for southern
+</code></pre>
+</li>
+<li>@return band letter</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.issvalbard(_:_:)">
+    <h3>
+        <code><a href="#gridzones.issvalbard(_:_:)">is​Svalbard(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">isSvalbard</span>(<span class="keyword">_</span> <span class="variable">zoneNumber</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">bandLetter</span>: <span class="type">Character</span>) -&gt; <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Is the zone number and band letter a Svalbard GZD (31X - 37X)</li>
+<li></li>
+<li>@param zoneNumber</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+<li>@param bandLetter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+<li>@return true if a Svalbard GZD</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.issvalbardletter(_:)">
+    <h3>
+        <code><a href="#gridzones.issvalbardletter(_:)">is​Svalbard​Letter(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">isSvalbardLetter</span>(<span class="keyword">_</span> <span class="variable">bandLetter</span>: <span class="type">Character</span>) -&gt; <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Is the band letter a Svalbard GZD (X)</li>
+<li></li>
+<li>@param bandLetter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+<li>@return true if a Svalbard GZD</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridzones.issvalbardzone(_:)">
+    <h3>
+        <code><a href="#gridzones.issvalbardzone(_:)">is​Svalbard​Zone(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">isSvalbardZone</span>(<span class="keyword">_</span> <span class="variable">zoneNumber</span>: <span class="type">Int</span>) -&gt; <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Is the zone number a Svalbard GZD (31 - 37)</li>
+<li></li>
+<li>@param zoneNumber</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+<li>@return true if a Svalbard GZD</li>
+</ul>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-09-06T13:47:17-0600">September 6, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

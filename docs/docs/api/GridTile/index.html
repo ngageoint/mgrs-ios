@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mgrs-ios 1.0.0 - GridTile</title>
+    <link rel="stylesheet" type="text/css" href="https://ngageoint.github.io/mgrs-ios/docs/api/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://ngageoint.github.io/mgrs-ios/docs/api/">
+            <strong>
+                mgrs-ios 1.0.0
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#gridtile.init(_:_:_:_:_:)">init(_:​_:​_:​_:​_:​)</a></li><li class="initializer"><a href="#gridtile.init(_:_:_:_:_:_:)">init(_:​_:​_:​_:​_:​_:​)</a></li><li class="initializer"><a href="#gridtile.init(_:_:_:)">init(_:​_:​_:​)</a></li><li class="initializer"><a href="#gridtile.init(_:_:_:_:)">init(_:​_:​_:​_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#gridtile.width">width</a></li><li class="variable"><a href="#gridtile.height">height</a></li><li class="variable"><a href="#gridtile.zoom">zoom</a></li><li class="variable"><a href="#gridtile.bounds">bounds</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#gridtile.bounds(_:)">bounds(_:​)</a></li><li class="function"><a href="#gridtile.boundsdegrees()">bounds​Degrees()</a></li><li class="function"><a href="#gridtile.boundsmeters()">bounds​Meters()</a></li><li class="function"><a href="#gridtile.pixel(_:)">pixel(_:​)</a></li><li class="function"><a href="#gridtile.xpixel(_:)">xPixel(_:​)</a></li><li class="function"><a href="#gridtile.ypixel(_:)">yPixel(_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Grid​Tile</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">GridTile</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Grid Tile</li>
+</ul>
+
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="gridtile.init(_:_:_:_:_:)">
+    <h3>
+        <code><a href="#gridtile.init(_:_:_:_:_:)">init(_:​_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">width</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">height</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">x</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">y</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">zoom</span>: <span class="type">Int</span>)  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Initialize</li>
+<li></li>
+<li>@param width</li>
+<li>
+<pre><code>       tile width
+</code></pre>
+</li>
+<li>@param height</li>
+<li>
+<pre><code>       tile height
+</code></pre>
+</li>
+<li>@param x</li>
+<li>
+<pre><code>       x coordinate
+</code></pre>
+</li>
+<li>@param y</li>
+<li>
+<pre><code>       y coordinate
+</code></pre>
+</li>
+<li>@param zoom</li>
+<li>
+<pre><code>       zoom level
+</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="initializer" id="gridtile.init(_:_:_:_:_:_:)">
+    <h3>
+        <code><a href="#gridtile.init(_:_:_:_:_:_:)">init(_:​_:​_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">width</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">height</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">x</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">y</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">zoom</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">gridZoom</span>: <span class="type">Int</span>)  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Initialize</li>
+<li></li>
+<li>@param width</li>
+<li>
+<pre><code>       tile width
+</code></pre>
+</li>
+<li>@param height</li>
+<li>
+<pre><code>       tile height
+</code></pre>
+</li>
+<li>@param x</li>
+<li>
+<pre><code>       x coordinate
+</code></pre>
+</li>
+<li>@param y</li>
+<li>
+<pre><code>       y coordinate
+</code></pre>
+</li>
+<li>@param zoom</li>
+<li>
+<pre><code>       zoom level
+</code></pre>
+</li>
+<li>@param gridZoom</li>
+<li>
+<pre><code>       grid zoom level if different from the XYZ zoom level
+</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="initializer" id="gridtile.init(_:_:_:)">
+    <h3>
+        <code><a href="#gridtile.init(_:_:_:)">init(_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">width</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">height</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">bounds</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>)  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Initialize</li>
+<li></li>
+<li>@param width</li>
+<li>
+<pre><code>       tile width
+</code></pre>
+</li>
+<li>@param height</li>
+<li>
+<pre><code>       tile height
+</code></pre>
+</li>
+<li>@param bounds</li>
+<li>
+<pre><code>       tile bounds
+</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="initializer" id="gridtile.init(_:_:_:_:)">
+    <h3>
+        <code><a href="#gridtile.init(_:_:_:_:)">init(_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">width</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">height</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">bounds</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>, <span class="keyword">_</span> <span class="variable">gridZoomOffset</span>: <span class="type">Int</span>)  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Initialize</li>
+<li></li>
+<li>@param width</li>
+<li>
+<pre><code>       tile width
+</code></pre>
+</li>
+<li>@param height</li>
+<li>
+<pre><code>       tile height
+</code></pre>
+</li>
+<li>@param bounds</li>
+<li>
+<pre><code>       tile bounds
+</code></pre>
+</li>
+<li>@param gridZoomOffset</li>
+<li>
+<pre><code>       grid zoom level offset from bounds determined zoom level
+</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="gridtile.width">
+    <h3>
+        <code><a href="#gridtile.width">width</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">width</span>: <span class="type">Int</span></body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Tile width</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="variable" id="gridtile.height">
+    <h3>
+        <code><a href="#gridtile.height">height</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">height</span>: <span class="type">Int</span></body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Tile height</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="variable" id="gridtile.zoom">
+    <h3>
+        <code><a href="#gridtile.zoom">zoom</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">zoom</span>: <span class="type">Int</span></body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Grid Zoom level</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="variable" id="gridtile.bounds">
+    <h3>
+        <code><a href="#gridtile.bounds">bounds</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">bounds</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a></body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Bounds</li>
+</ul>
+
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="gridtile.bounds(_:)">
+    <h3>
+        <code><a href="#gridtile.bounds(_:)">bounds(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">bounds</span>(<span class="keyword">_</span> <span class="variable">unit</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Unit"><span class="type">Unit</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the bounds in the units</li>
+<li></li>
+<li>@param unit</li>
+<li>
+<pre><code>       units
+</code></pre>
+</li>
+<li>@return bounds in units</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridtile.boundsdegrees()">
+    <h3>
+        <code><a href="#gridtile.boundsdegrees()">bounds​Degrees()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">boundsDegrees</span>() -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the bounds in degrees</li>
+<li></li>
+<li>@return bounds in degrees</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridtile.boundsmeters()">
+    <h3>
+        <code><a href="#gridtile.boundsmeters()">bounds​Meters()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">boundsMeters</span>() -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the bounds in meters</li>
+<li></li>
+<li>@return bounds in meters</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridtile.pixel(_:)">
+    <h3>
+        <code><a href="#gridtile.pixel(_:)">pixel(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">pixel</span>(<span class="keyword">_</span> <span class="variable">point</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Pixel"><span class="type">Pixel</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the point pixel location in the tile</li>
+<li></li>
+<li>@param point</li>
+<li>
+<pre><code>       point
+</code></pre>
+</li>
+<li>@return pixel</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridtile.xpixel(_:)">
+    <h3>
+        <code><a href="#gridtile.xpixel(_:)">xPixel(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">xPixel</span>(<span class="keyword">_</span> <span class="variable">longitude</span>: <span class="type">Double</span>) -&gt; <span class="type">Float</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the longitude in meters x pixel location in the tile</li>
+<li></li>
+<li>@param longitude</li>
+<li>
+<pre><code>       longitude in meters
+</code></pre>
+</li>
+<li>@return x pixel</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridtile.ypixel(_:)">
+    <h3>
+        <code><a href="#gridtile.ypixel(_:)">yPixel(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">yPixel</span>(<span class="keyword">_</span> <span class="variable">latitude</span>: <span class="type">Double</span>) -&gt; <span class="type">Float</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the latitude (in meters) y pixel location in the tile</li>
+<li></li>
+<li>@param latitude</li>
+<li>
+<pre><code>       latitude in meters
+</code></pre>
+</li>
+<li>@return y pixel</li>
+</ul>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-09-06T13:47:17-0600">September 6, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

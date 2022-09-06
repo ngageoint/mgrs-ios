@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mgrs-ios 1.0.0 - UTM</title>
+    <link rel="stylesheet" type="text/css" href="https://ngageoint.github.io/mgrs-ios/docs/api/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://ngageoint.github.io/mgrs-ios/docs/api/">
+            <strong>
+                mgrs-ios 1.0.0
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#utm.init(_:_:_:_:)">init(_:​_:​_:​_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#utm.zone">zone</a></li><li class="variable"><a href="#utm.hemisphere">hemisphere</a></li><li class="variable"><a href="#utm.easting">easting</a></li><li class="variable"><a href="#utm.northing">northing</a></li><li class="variable"><a href="#utm.description">description</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#utm.point(_:_:_:_:)">point(_:​_:​_:​_:​)</a></li><li class="function"><a href="#utm.topoint()">to​Point()</a></li><li class="function"><a href="#utm.tomgrs()">to​MGRS()</a></li><li class="function"><a href="#utm.format()">format()</a></li><li class="function"><a href="#utm.isutm(_:)">is​UTM(_:​)</a></li><li class="function"><a href="#utm.parse(_:)">parse(_:​)</a></li><li class="function"><a href="#utm.from(_:)">from(_:​)</a></li><li class="function"><a href="#utm.from(_:_:)">from(_:​_:​)</a></li><li class="function"><a href="#utm.from(_:_:_:)">from(_:​_:​_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">UTM</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">UTM</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Universal Transverse Mercator Projection</li>
+</ul>
+
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="utm.init(_:_:_:_:)">
+    <h3>
+        <code><a href="#utm.init(_:_:_:_:)">init(_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">zone</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">hemisphere</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Hemisphere"><span class="type">Hemisphere</span></a>, <span class="keyword">_</span> <span class="variable">easting</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">northing</span>: <span class="type">Double</span>)  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Initialize</li>
+<li></li>
+<li>@param zone</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+<li>@param hemisphere</li>
+<li>
+<pre><code>       hemisphere
+</code></pre>
+</li>
+<li>@param easting</li>
+<li>
+<pre><code>       easting
+</code></pre>
+</li>
+<li>@param northing</li>
+<li>
+<pre><code>       northing
+</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="utm.zone">
+    <h3>
+        <code><a href="#utm.zone">zone</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">zone</span>: <span class="type">Int</span></body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Zone number</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="variable" id="utm.hemisphere">
+    <h3>
+        <code><a href="#utm.hemisphere">hemisphere</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">hemisphere</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Hemisphere"><span class="type">Hemisphere</span></a></body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Hemisphere</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="variable" id="utm.easting">
+    <h3>
+        <code><a href="#utm.easting">easting</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">easting</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Easting</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="variable" id="utm.northing">
+    <h3>
+        <code><a href="#utm.northing">northing</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">northing</span>: <span class="type">Double</span></body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Northing</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="variable" id="utm.description">
+    <h3>
+        <code><a href="#utm.description">description</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">description</span>: <span class="type">String</span>  </body></html></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="utm.point(_:_:_:_:)">
+    <h3>
+        <code><a href="#utm.point(_:_:_:_:)">point(_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">point</span>(<span class="keyword">_</span> <span class="variable">zone</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">hemisphere</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Hemisphere"><span class="type">Hemisphere</span></a>, <span class="keyword">_</span> <span class="variable">easting</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">northing</span>: <span class="type">Double</span>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Create a point from the UTM attributes</li>
+<li></li>
+<li>@param zone</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+<li>@param hemisphere</li>
+<li>
+<pre><code>       hemisphere
+</code></pre>
+</li>
+<li>@param easting</li>
+<li>
+<pre><code>       easting
+</code></pre>
+</li>
+<li>@param northing</li>
+<li>
+<pre><code>       northing
+</code></pre>
+</li>
+<li>@return point</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="utm.topoint()">
+    <h3>
+        <code><a href="#utm.topoint()">to​Point()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">toPoint</span>() -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Convert to a point</li>
+<li></li>
+<li>@return point</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="utm.tomgrs()">
+    <h3>
+        <code><a href="#utm.tomgrs()">to​MGRS()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">toMGRS</span>() -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/MGRS"><span class="type">MGRS</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Convert to a MGRS coordinate</li>
+<li></li>
+<li>@return MGRS</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="utm.format()">
+    <h3>
+        <code><a href="#utm.format()">format()</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">format</span>() -&gt; <span class="type">String</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Format to a UTM string</li>
+<li></li>
+<li>@return UTM string</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="utm.isutm(_:)">
+    <h3>
+        <code><a href="#utm.isutm(_:)">is​UTM(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">isUTM</span>(<span class="keyword">_</span> <span class="variable">utm</span>: <span class="type">String</span>) -&gt; <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Return whether the given string is valid UTM string</li>
+<li></li>
+<li>@param utm</li>
+<li>
+<pre><code>       potential UTM string
+</code></pre>
+</li>
+<li>@return true if UTM string is valid, false otherwise</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="utm.parse(_:)">
+    <h3>
+        <code><a href="#utm.parse(_:)">parse(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">parse</span>(<span class="keyword">_</span> <span class="variable">utm</span>: <span class="type">String</span>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/UTM"><span class="type">UTM</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Parse a UTM value (Zone N|S Easting Northing)</li>
+<li></li>
+<li>@param utm</li>
+<li>
+<pre><code>       UTM value
+</code></pre>
+</li>
+<li>@return UTM</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="utm.from(_:)">
+    <h3>
+        <code><a href="#utm.from(_:)">from(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">from</span>(<span class="keyword">_</span> <span class="variable">point</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/UTM"><span class="type">UTM</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Create from a point</li>
+<li></li>
+<li>@param point</li>
+<li>
+<pre><code>       point
+</code></pre>
+</li>
+<li>@return UTM</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="utm.from(_:_:)">
+    <h3>
+        <code><a href="#utm.from(_:_:)">from(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">from</span>(<span class="keyword">_</span> <span class="variable">point</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>, <span class="keyword">_</span> <span class="variable">zone</span>: <span class="type">Int</span>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/UTM"><span class="type">UTM</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Create from a point and zone number</li>
+<li></li>
+<li>@param point</li>
+<li>
+<pre><code>       point
+</code></pre>
+</li>
+<li>@param zone</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+<li>@return UTM</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="utm.from(_:_:_:)">
+    <h3>
+        <code><a href="#utm.from(_:_:_:)">from(_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">from</span>(<span class="keyword">_</span> <span class="variable">point</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>, <span class="keyword">_</span> <span class="variable">zone</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">hemisphere</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Hemisphere"><span class="type">Hemisphere</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/UTM"><span class="type">UTM</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Create from a coordinate, zone number, and hemisphere</li>
+<li></li>
+<li>@param point</li>
+<li>
+<pre><code>       coordinate
+</code></pre>
+</li>
+<li>@param zone</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+<li>@param hemisphere</li>
+<li>
+<pre><code>       hemisphere
+</code></pre>
+</li>
+<li>@return UTM</li>
+</ul>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-09-06T13:47:17-0600">September 6, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

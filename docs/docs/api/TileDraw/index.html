@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mgrs-ios 1.0.0 - TileDraw</title>
+    <link rel="stylesheet" type="text/css" href="https://ngageoint.github.io/mgrs-ios/docs/api/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://ngageoint.github.io/mgrs-ios/docs/api/">
+            <strong>
+                mgrs-ios 1.0.0
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#methods">Methods</a><ul><li class="function"><a href="#tiledraw.drawline(_:_:_:_:_:)">draw​Line(_:​_:​_:​_:​_:​)</a></li><li class="function"><a href="#tiledraw.addline(_:_:_:)">add​Line(_:​_:​_:​)</a></li><li class="function"><a href="#tiledraw.drawlabels(_:_:_:_:)">draw​Labels(_:​_:​_:​_:​)</a></li><li class="function"><a href="#tiledraw.drawlabel(_:_:_:_:_:)">draw​Label(_:​_:​_:​_:​_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Tile​Draw</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">TileDraw</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Tile draw utilities for lines and labels</li>
+</ul>
+
+</div>
+
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="tiledraw.drawline(_:_:_:_:_:)">
+    <h3>
+        <code><a href="#tiledraw.drawline(_:_:_:_:_:)">draw​Line(_:​_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">drawLine</span>(<span class="keyword">_</span> <span class="variable">line</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Line"><span class="type">Line</span></a>, <span class="keyword">_</span> <span class="variable">tile</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridTile"><span class="type">GridTile</span></a>, <span class="keyword">_</span> <span class="variable">width</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">color</span>: <span class="type">UIColor</span>?, <span class="keyword">_</span> <span class="variable">context</span>: <span class="type">CGContext</span>)  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Draw the lines on the tile</li>
+<li></li>
+<li>@param lines  lines to draw</li>
+<li>@param tile   tile</li>
+<li>@param grid   grid</li>
+<li>@param context graphics context</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="tiledraw.addline(_:_:_:)">
+    <h3>
+        <code><a href="#tiledraw.addline(_:_:_:)">add​Line(_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">addLine</span>(<span class="keyword">_</span> <span class="variable">tile</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridTile"><span class="type">GridTile</span></a>, <span class="keyword">_</span> <span class="variable">path</span>: <span class="type">CGMutablePath</span>, <span class="keyword">_</span> <span class="variable">line</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Line"><span class="type">Line</span></a>)  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Add the line to the path</li>
+<li></li>
+<li>@param tile tile</li>
+<li>@param path line path</li>
+<li>@param line line to draw</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="tiledraw.drawlabels(_:_:_:_:)">
+    <h3>
+        <code><a href="#tiledraw.drawlabels(_:_:_:_:)">draw​Labels(_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">drawLabels</span>(<span class="keyword">_</span> <span class="variable">labels</span>: [<a href="https://ngageoint.github.io/mgrs-ios/docs/api/Label"><span class="type">Label</span></a>], <span class="keyword">_</span> <span class="variable">buffer</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">tile</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridTile"><span class="type">GridTile</span></a>, <span class="keyword">_</span> <span class="variable">grid</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/BaseGrid"><span class="type">BaseGrid</span></a>)  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Draw the labels on the tile</li>
+<li></li>
+<li>@param labels labels to draw</li>
+<li>@param buffer grid zone edge buffer</li>
+<li>@param tile   tile</li>
+<li>@param grid   grid</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="tiledraw.drawlabel(_:_:_:_:_:)">
+    <h3>
+        <code><a href="#tiledraw.drawlabel(_:_:_:_:_:)">draw​Label(_:​_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">drawLabel</span>(<span class="keyword">_</span> <span class="variable">label</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Label"><span class="type">Label</span></a>, <span class="keyword">_</span> <span class="variable">buffer</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">tile</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridTile"><span class="type">GridTile</span></a>, <span class="keyword">_</span> <span class="variable">font</span>: <span class="type">UIFont</span>, <span class="keyword">_</span> <span class="variable">color</span>: <span class="type">UIColor</span>)  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Draw the label</li>
+<li></li>
+<li>@param label  label to draw</li>
+<li>@param buffer grid zone edge buffer</li>
+<li>@param tile   tile</li>
+<li>@param font   font</li>
+<li>@param color   color</li>
+</ul>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-09-06T13:47:17-0600">September 6, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

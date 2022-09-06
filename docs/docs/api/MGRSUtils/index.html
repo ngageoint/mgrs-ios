@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mgrs-ios 1.0.0 - MGRSUtils</title>
+    <link rel="stylesheet" type="text/css" href="https://ngageoint.github.io/mgrs-ios/docs/api/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://ngageoint.github.io/mgrs-ios/docs/api/">
+            <strong>
+                mgrs-ios 1.0.0
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#methods">Methods</a><ul><li class="function"><a href="#mgrsutils.validatezonenumber(_:)">validate​Zone​Number(_:​)</a></li><li class="function"><a href="#mgrsutils.validatebandletter(_:)">validate​Band​Letter(_:​)</a></li><li class="function"><a href="#mgrsutils.nextbandletter(_:)">next​Band​Letter(_:​)</a></li><li class="function"><a href="#mgrsutils.previousbandletter(_:)">previous​Band​Letter(_:​)</a></li><li class="function"><a href="#mgrsutils.labelname(_:_:)">label​Name(_:​_:​)</a></li><li class="function"><a href="#mgrsutils.hemisphere(_:)">hemisphere(_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">MGRSUtils</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">MGRSUtils</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Military Grid Reference System utilities</li>
+</ul>
+
+</div>
+
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="mgrsutils.validatezonenumber(_:)">
+    <h3>
+        <code><a href="#mgrsutils.validatezonenumber(_:)">validate​Zone​Number(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">validateZoneNumber</span>(<span class="keyword">_</span> <span class="variable">number</span>: <span class="type">Int</span>)  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Validate the zone number</li>
+<li></li>
+<li>@param number</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="mgrsutils.validatebandletter(_:)">
+    <h3>
+        <code><a href="#mgrsutils.validatebandletter(_:)">validate​Band​Letter(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">validateBandLetter</span>(<span class="keyword">_</span> <span class="variable">letter</span>: <span class="type">Character</span>)  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Validate the band letter</li>
+<li></li>
+<li>@param letter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="mgrsutils.nextbandletter(_:)">
+    <h3>
+        <code><a href="#mgrsutils.nextbandletter(_:)">next​Band​Letter(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">nextBandLetter</span>(<span class="keyword">_</span> <span class="variable">letter</span>: <span class="type">Character</span>) -&gt; <span class="type">Character</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the next band letter</li>
+<li></li>
+<li>@param letter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+<li>@return next band letter, 'Y' (MGRSConstants.MAX_BAND_LETTER + 1)</li>
+<li>
+<pre><code>    if no next bands
+</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="mgrsutils.previousbandletter(_:)">
+    <h3>
+        <code><a href="#mgrsutils.previousbandletter(_:)">previous​Band​Letter(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">previousBandLetter</span>(<span class="keyword">_</span> <span class="variable">letter</span>: <span class="type">Character</span>) -&gt; <span class="type">Character</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the previous band letter</li>
+<li></li>
+<li>@param letter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+<li>@return previous band letter, 'B' (MGRSConstants.MIN_BAND_LETTER</li>
+<li>
+<pre><code>    - 1) if no previous bands
+</code></pre>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="mgrsutils.labelname(_:_:)">
+    <h3>
+        <code><a href="#mgrsutils.labelname(_:_:)">label​Name(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">labelName</span>(<span class="keyword">_</span> <span class="variable">zoneNumber</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">bandLetter</span>: <span class="type">Character</span>) -&gt; <span class="type">String</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the label name</li>
+<li></li>
+<li>@param zoneNumber</li>
+<li>
+<pre><code>       zone number
+</code></pre>
+</li>
+<li>@param bandLetter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+<li>@return name</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="mgrsutils.hemisphere(_:)">
+    <h3>
+        <code><a href="#mgrsutils.hemisphere(_:)">hemisphere(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">hemisphere</span>(<span class="keyword">_</span> <span class="variable">bandLetter</span>: <span class="type">Character</span>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Hemisphere"><span class="type">Hemisphere</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the hemisphere from the band letter</li>
+<li></li>
+<li>@param bandLetter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+<li>@return hemisphere</li>
+</ul>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-09-06T13:47:17-0600">September 6, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>

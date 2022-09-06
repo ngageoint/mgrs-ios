@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mgrs-ios 1.0.0 - GridUtils</title>
+    <link rel="stylesheet" type="text/css" href="https://ngageoint.github.io/mgrs-ios/docs/api/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="https://ngageoint.github.io/mgrs-ios/docs/api/">
+            <strong>
+                mgrs-ios 1.0.0
+            </strong>
+            <span>Documentation</span>
+        </a>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#methods">Methods</a><ul><li class="function"><a href="#gridutils.pixel(_:_:_:_:)">pixel(_:​_:​_:​_:​)</a></li><li class="function"><a href="#gridutils.xpixel(_:_:_:)">xPixel(_:​_:​_:​)</a></li><li class="function"><a href="#gridutils.ypixel(_:_:_:)">yPixel(_:​_:​_:​)</a></li><li class="function"><a href="#gridutils.bounds(_:_:_:)">bounds(_:​_:​_:​)</a></li><li class="function"><a href="#gridutils.tilesperside(_:)">tiles​Per​Side(_:​)</a></li><li class="function"><a href="#gridutils.tilesize(_:)">tile​Size(_:​)</a></li><li class="function"><a href="#gridutils.zoomlevel(_:)">zoom​Level(_:​)</a></li><li class="function"><a href="#gridutils.tounit(_:_:_:_:)">to​Unit(_:​_:​_:​_:​)</a></li><li class="function"><a href="#gridutils.tounit(_:_:_:)">to​Unit(_:​_:​_:​)</a></li><li class="function"><a href="#gridutils.isomittedbandletter(_:)">is​Omitted​Band​Letter(_:​)</a></li><li class="function"><a href="#gridutils.precisionbefore(_:_:)">precision​Before(_:​_:​)</a></li><li class="function"><a href="#gridutils.precisionafter(_:_:)">precision​After(_:​_:​)</a></li><li class="function"><a href="#gridutils.intersection(_:_:)">intersection(_:​_:​)</a></li><li class="function"><a href="#gridutils.intersection(_:_:_:_:)">intersection(_:​_:​_:​_:​)</a></li><li class="function"><a href="#gridutils.incrementcharacter(_:)">increment​Character(_:​)</a></li><li class="function"><a href="#gridutils.decrementcharacter(_:)">decrement​Character(_:​)</a></li><li class="function"><a href="#gridutils.incrementcharacter(_:_:)">increment​Character(_:​_:​)</a></li><li class="function"><a href="#gridutils.charat(_:_:)">char​At(_:​_:​)</a></li><li class="function"><a href="#gridutils.indexof(_:_:)">index​Of(_:​_:​)</a></li><li class="function"><a href="#gridutils.substring(_:_:_:)">substring(_:​_:​_:​)</a></li><li class="function"><a href="#gridutils.substring(_:_:)">substring(_:​_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Grid​Utils</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">GridUtils</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Grid utilities</li>
+</ul>
+
+</div>
+
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="gridutils.pixel(_:_:_:_:)">
+    <h3>
+        <code><a href="#gridutils.pixel(_:_:_:_:)">pixel(_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">pixel</span>(<span class="keyword">_</span> <span class="variable">width</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">height</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">bounds</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>, <span class="keyword">_</span> <span class="variable">point</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Pixel"><span class="type">Pixel</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the pixel where the point fits into the bounds</li>
+<li></li>
+<li>@param width</li>
+<li>
+<pre><code>       width
+</code></pre>
+</li>
+<li>@param height</li>
+<li>
+<pre><code>       height
+</code></pre>
+</li>
+<li>@param bounds</li>
+<li>
+<pre><code>       bounds
+</code></pre>
+</li>
+<li>@param point</li>
+<li>
+<pre><code>       point
+</code></pre>
+</li>
+<li>@return pixel</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.xpixel(_:_:_:)">
+    <h3>
+        <code><a href="#gridutils.xpixel(_:_:_:)">xPixel(_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">xPixel</span>(<span class="keyword">_</span> <span class="variable">width</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">bounds</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>, <span class="keyword">_</span> <span class="variable">longitude</span>: <span class="type">Double</span>) -&gt; <span class="type">Float</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the X pixel for where the longitude in meters fits into the bounds</li>
+<li></li>
+<li>@param width</li>
+<li>
+<pre><code>       width
+</code></pre>
+</li>
+<li>@param bounds</li>
+<li>
+<pre><code>       bounds
+</code></pre>
+</li>
+<li>@param longitude</li>
+<li>
+<pre><code>       longitude in meters
+</code></pre>
+</li>
+<li>@return x pixel</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.ypixel(_:_:_:)">
+    <h3>
+        <code><a href="#gridutils.ypixel(_:_:_:)">yPixel(_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">yPixel</span>(<span class="keyword">_</span> <span class="variable">height</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">bounds</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>, <span class="keyword">_</span> <span class="variable">latitude</span>: <span class="type">Double</span>) -&gt; <span class="type">Float</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the Y pixel for where the latitude in meters fits into the bounds</li>
+<li></li>
+<li>@param height</li>
+<li>
+<pre><code>       height
+</code></pre>
+</li>
+<li>@param bounds</li>
+<li>
+<pre><code>       bounds
+</code></pre>
+</li>
+<li>@param latitude</li>
+<li>
+<pre><code>       latitude
+</code></pre>
+</li>
+<li>@return y pixel</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.bounds(_:_:_:)">
+    <h3>
+        <code><a href="#gridutils.bounds(_:_:_:)">bounds(_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">bounds</span>(<span class="keyword">_</span> <span class="variable">x</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">y</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">zoom</span>: <span class="type">Int</span>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the tile bounds from the XYZ tile coordinates and zoom level</li>
+<li></li>
+<li>@param x</li>
+<li>
+<pre><code>       x coordinate
+</code></pre>
+</li>
+<li>@param y</li>
+<li>
+<pre><code>       y coordinate
+</code></pre>
+</li>
+<li>@param zoom</li>
+<li>
+<pre><code>       zoom level
+</code></pre>
+</li>
+<li>@return bounds</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.tilesperside(_:)">
+    <h3>
+        <code><a href="#gridutils.tilesperside(_:)">tiles​Per​Side(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">tilesPerSide</span>(<span class="keyword">_</span> <span class="variable">zoom</span>: <span class="type">Int</span>) -&gt; <span class="type">Int</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the tiles per side, width and height, at the zoom level</li>
+<li></li>
+<li>@param zoom</li>
+<li>
+<pre><code>       zoom level
+</code></pre>
+</li>
+<li>@return tiles per side</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.tilesize(_:)">
+    <h3>
+        <code><a href="#gridutils.tilesize(_:)">tile​Size(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">tileSize</span>(<span class="keyword">_</span> <span class="variable">tilesPerSide</span>: <span class="type">Int</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the tile size in meters</li>
+<li></li>
+<li>@param tilesPerSide</li>
+<li>
+<pre><code>       tiles per side
+</code></pre>
+</li>
+<li>@return tile size</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.zoomlevel(_:)">
+    <h3>
+        <code><a href="#gridutils.zoomlevel(_:)">zoom​Level(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">zoomLevel</span>(<span class="keyword">_</span> <span class="variable">bounds</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Bounds"><span class="type">Bounds</span></a>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the zoom level of the bounds using the shortest bounds side length</li>
+<li></li>
+<li>@param bounds</li>
+<li>
+<pre><code>       bounds
+</code></pre>
+</li>
+<li>@return zoom level</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.tounit(_:_:_:_:)">
+    <h3>
+        <code><a href="#gridutils.tounit(_:_:_:_:)">to​Unit(_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">toUnit</span>(<span class="keyword">_</span> <span class="variable">fromUnit</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Unit"><span class="type">Unit</span></a>, <span class="keyword">_</span> <span class="variable">longitude</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">latitude</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">toUnit</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Unit"><span class="type">Unit</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Convert a coordinate from a unit to another unit</li>
+<li></li>
+<li>@param fromUnit</li>
+<li>
+<pre><code>       unit of provided coordinate
+</code></pre>
+</li>
+<li>@param longitude</li>
+<li>
+<pre><code>       longitude
+</code></pre>
+</li>
+<li>@param latitude</li>
+<li>
+<pre><code>       latitude
+</code></pre>
+</li>
+<li>@param toUnit</li>
+<li>
+<pre><code>       desired unit
+</code></pre>
+</li>
+<li>@return point in unit</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.tounit(_:_:_:)">
+    <h3>
+        <code><a href="#gridutils.tounit(_:_:_:)">to​Unit(_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">toUnit</span>(<span class="keyword">_</span> <span class="variable">longitude</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">latitude</span>: <span class="type">Double</span>,
+                              <span class="keyword">_</span> <span class="variable">unit</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Unit"><span class="type">Unit</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Convert a coordinate to the unit, assumes the coordinate is in the</li>
+<li>opposite unit</li>
+<li></li>
+<li>@param longitude</li>
+<li>
+<pre><code>       longitude
+</code></pre>
+</li>
+<li>@param latitude</li>
+<li>
+<pre><code>       latitude
+</code></pre>
+</li>
+<li>@param unit</li>
+<li>
+<pre><code>       desired unit
+</code></pre>
+</li>
+<li>@return point in unit</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.isomittedbandletter(_:)">
+    <h3>
+        <code><a href="#gridutils.isomittedbandletter(_:)">is​Omitted​Band​Letter(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">isOmittedBandLetter</span>(<span class="keyword">_</span> <span class="variable">letter</span>: <span class="type">Character</span>) -&gt; <span class="type">Bool</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Is the band letter an omitted letter</li>
+<li>GridConstants.BAND_LETTER_OMIT_I or</li>
+<li>GridConstants.BAND_LETTER_OMIT_O</li>
+<li></li>
+<li>@param letter</li>
+<li>
+<pre><code>       band letter
+</code></pre>
+</li>
+<li>@return true if omitted</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.precisionbefore(_:_:)">
+    <h3>
+        <code><a href="#gridutils.precisionbefore(_:_:)">precision​Before(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">precisionBefore</span>(<span class="keyword">_</span> <span class="variable">value</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">precision</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the precision value before the value</li>
+<li></li>
+<li>@param value</li>
+<li>
+<pre><code>       value
+</code></pre>
+</li>
+<li>@param precision</li>
+<li>
+<pre><code>       precision
+</code></pre>
+</li>
+<li>@return precision value</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.precisionafter(_:_:)">
+    <h3>
+        <code><a href="#gridutils.precisionafter(_:_:)">precision​After(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">precisionAfter</span>(<span class="keyword">_</span> <span class="variable">value</span>: <span class="type">Double</span>, <span class="keyword">_</span> <span class="variable">precision</span>: <span class="type">Double</span>) -&gt; <span class="type">Double</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the precision value after the value</li>
+<li></li>
+<li>@param value</li>
+<li>
+<pre><code>       value
+</code></pre>
+</li>
+<li>@param precision</li>
+<li>
+<pre><code>       precision
+</code></pre>
+</li>
+<li>@return precision value</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.intersection(_:_:)">
+    <h3>
+        <code><a href="#gridutils.intersection(_:_:)">intersection(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">intersection</span>(<span class="keyword">_</span> <span class="variable">line1</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Line"><span class="type">Line</span></a>, <span class="keyword">_</span> <span class="variable">line2</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/Line"><span class="type">Line</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>?  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the point intersection between two lines</li>
+<li></li>
+<li>@param line1</li>
+<li>
+<pre><code>       first line
+</code></pre>
+</li>
+<li>@param line2</li>
+<li>
+<pre><code>       second line
+</code></pre>
+</li>
+<li>@return intersection point or null if no intersection</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.intersection(_:_:_:_:)">
+    <h3>
+        <code><a href="#gridutils.intersection(_:_:_:_:)">intersection(_:​_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">intersection</span>(<span class="keyword">_</span> <span class="variable">line1Point1</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>, <span class="keyword">_</span> <span class="variable">line1Point2</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>, <span class="keyword">_</span> <span class="variable">line2Point1</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>, <span class="keyword">_</span> <span class="variable">line2Point2</span>: <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>) -&gt; <a href="https://ngageoint.github.io/mgrs-ios/docs/api/GridPoint"><span class="type">GridPoint</span></a>?  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the point intersection between end points of two lines</li>
+<li></li>
+<li>@param line1Point1</li>
+<li>
+<pre><code>       first point of the first line
+</code></pre>
+</li>
+<li>@param line1Point2</li>
+<li>
+<pre><code>       second point of the first line
+</code></pre>
+</li>
+<li>@param line2Point1</li>
+<li>
+<pre><code>       first point of the second line
+</code></pre>
+</li>
+<li>@param line2Point2</li>
+<li>
+<pre><code>       second point of the second line
+</code></pre>
+</li>
+<li>@return intersection point or null if no intersection</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.incrementcharacter(_:)">
+    <h3>
+        <code><a href="#gridutils.incrementcharacter(_:)">increment​Character(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">incrementCharacter</span>(<span class="keyword">_</span> <span class="variable">character</span>: <span class="type">Character</span>) -&gt; <span class="type">Character</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Increment the ASCII character by one</li>
+<li></li>
+<li>@param character</li>
+<li>
+<pre><code>       starting character
+</code></pre>
+</li>
+<li>@return next character</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.decrementcharacter(_:)">
+    <h3>
+        <code><a href="#gridutils.decrementcharacter(_:)">decrement​Character(_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">decrementCharacter</span>(<span class="keyword">_</span> <span class="variable">character</span>: <span class="type">Character</span>) -&gt; <span class="type">Character</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Decrement the ASCII character by one</li>
+<li></li>
+<li>@param character</li>
+<li>
+<pre><code>       starting character
+</code></pre>
+</li>
+<li>@return previous character</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.incrementcharacter(_:_:)">
+    <h3>
+        <code><a href="#gridutils.incrementcharacter(_:_:)">increment​Character(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">incrementCharacter</span>(<span class="keyword">_</span> <span class="variable">character</span>: <span class="type">Character</span>, <span class="keyword">_</span> <span class="variable">increment</span>: <span class="type">Int</span>) -&gt; <span class="type">Character</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Increment the ASCII character</li>
+<li></li>
+<li>@param character</li>
+<li>
+<pre><code>       starting character
+</code></pre>
+</li>
+<li>@param increment</li>
+<li>
+<pre><code>       ASCII increment, positive or negative for decrement
+</code></pre>
+</li>
+<li>@return incremented character</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.charat(_:_:)">
+    <h3>
+        <code><a href="#gridutils.charat(_:_:)">char​At(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">charAt</span>(<span class="keyword">_</span> <span class="variable">value</span>: <span class="type">String</span>, <span class="keyword">_</span> <span class="variable">index</span>: <span class="type">Int</span>) -&gt; <span class="type">Character</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the character at the index in a string</li>
+<li></li>
+<li>@param value</li>
+<li>
+<pre><code>       string value
+</code></pre>
+</li>
+<li>@param index</li>
+<li>
+<pre><code>       character index
+</code></pre>
+</li>
+<li>@return character at index</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.indexof(_:_:)">
+    <h3>
+        <code><a href="#gridutils.indexof(_:_:)">index​Of(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">indexOf</span>(<span class="keyword">_</span> <span class="variable">value</span>: <span class="type">String</span>, <span class="keyword">_</span> <span class="variable">char</span>: <span class="type">Character</span>) -&gt; <span class="type">Int</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get the first index of the character in the string, or -1 if not contained</li>
+<li></li>
+<li>@param value</li>
+<li>
+<pre><code>       string value
+</code></pre>
+</li>
+<li>@param char</li>
+<li>
+<pre><code>       character
+</code></pre>
+</li>
+<li>@return index of character or -1</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.substring(_:_:_:)">
+    <h3>
+        <code><a href="#gridutils.substring(_:_:_:)">substring(_:​_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">substring</span>(<span class="keyword">_</span> <span class="variable">value</span>: <span class="type">String</span>, <span class="keyword">_</span> <span class="variable">beginIndex</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">endIndex</span>: <span class="type">Int</span>) -&gt; <span class="type">String</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get a substring of the string value from the inclusive begin index to the exclusive end index</li>
+<li></li>
+<li>@param value</li>
+<li>
+<pre><code>       string value
+</code></pre>
+</li>
+<li>@param beginIndex</li>
+<li>
+<pre><code>       begin index, inclusive
+</code></pre>
+</li>
+<li>@param endIndex</li>
+<li>
+<pre><code>       end index, exclusive
+</code></pre>
+</li>
+<li>@return substring as a string</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="gridutils.substring(_:_:)">
+    <h3>
+        <code><a href="#gridutils.substring(_:_:)">substring(_:​_:​)</a></code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><html><body><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> <span class="function">substring</span>(<span class="keyword">_</span> <span class="variable">value</span>: <span class="type">String</span>, <span class="keyword">_</span> <span class="variable">beginIndex</span>: <span class="type">Int</span>) -&gt; <span class="type">String</span>  </body></html></code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>Get a substring of the string value from the inclusive begin index to the end</li>
+<li></li>
+<li>@param value</li>
+<li>
+<pre><code>       string value
+</code></pre>
+</li>
+<li>@param beginIndex</li>
+<li>
+<pre><code>       begin index, inclusive
+</code></pre>
+</li>
+<li>@return substring as a string</li>
+</ul>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2022-09-06T13:47:17-0600">September 6, 2022</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-rc.1</span>.
+</p>
+    </footer>
+</body>
+</html>
