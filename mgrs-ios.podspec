@@ -12,8 +12,9 @@ Pod::Spec.new do |s|
   s.platform         = :ios, '12.0'
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'mgrs-ios/**/*.{h,m}'
+  s.source_files = 'mgrs-ios/**/*.swift'
 
+  s.resource_bundle = { 'mgrs-ios' => ['mgrs-ios/**/mgrs*.plist'] }
   s.frameworks = 'Foundation'
 
   s.dependency 'grid-ios', '~> 1.0.0'
