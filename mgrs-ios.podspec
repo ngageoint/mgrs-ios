@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'mgrs-ios'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.license          =  {:type => 'MIT', :file => 'LICENSE' }
   s.summary          = 'iOS SDK for Military Grid Reference System (MGRS)'
   s.homepage         = 'https://github.com/ngageoint/mgrs-ios'
