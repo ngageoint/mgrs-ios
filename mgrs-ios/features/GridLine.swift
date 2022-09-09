@@ -11,6 +11,7 @@ import grid_ios
 /**
  * Line between two points
  */
+@objc(MGRSGridLine)
 public class GridLine: Line {
     
     /**

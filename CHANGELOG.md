@@ -6,7 +6,8 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ## 1.0.2 (TBD)
 
-* TBD
+* grid-ios 1.0.1
+* objc 'MGRS' prefixed class name on objc inherited GridLine
 
 ## [1.0.1](https://github.com/ngageoint/mgrs-ios/releases/tag/1.0.1) (09-08-2022)
 
