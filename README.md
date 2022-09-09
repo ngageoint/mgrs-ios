@@ -17,6 +17,14 @@ Software source code previously released under an open source license and then m
 
 View the latest [Appledoc](http://ngageoint.github.io/mgrs-ios/docs/api/)
 
+#### Import ####
+
+```swift
+
+import mgrs_ios
+
+```
+
 #### Coordinates ####
 
 ```swift
