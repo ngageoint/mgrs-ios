@@ -188,6 +188,21 @@ if zoomGrids.hasGrids() {
 
 ```
 
+#### Objective-C ####
+
+```objectivec
+
+#import "mgrs_ios-Swift.h"
+
+```
+
+```objectivec
+
+MKTileOverlay *tileOverlay = [[MGRSTileOverlay alloc] init];
+[mapView addOverlay:tileOverlay];
+
+```
+
 ### Build ###
 
 [![Build & Test](https://github.com/ngageoint/mgrs-ios/workflows/Build%20&%20Test/badge.svg)](https://github.com/ngageoint/mgrs-ios/actions/workflows/build-test.yml)
