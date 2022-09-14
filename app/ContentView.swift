@@ -158,7 +158,6 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate, UIGestureRecognizerDelega
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let center = mapView.centerCoordinate
         let zoom = TileUtils.currentZoom(mapView)
-        coordinate.wgs84Label = formatter.string(from: center.longitude as NSNumber)! + "," + formatter.string(from: center.latitude as NSNumber)!
         var mgrs: String? = nil
         if mapState.searchMGRSResult != nil {
             mgrs = mapState.searchMGRSResult
@@ -166,8 +165,11 @@ class MapViewCoordinator: NSObject, MKMapViewDelegate, UIGestureRecognizerDelega
         } else {
             mgrs = mapState.tileOverlay.coordinate(center, Int(zoom))
         }
-        coordinate.mgrsLabel = mgrs!
-        coordinate.zoomLabel = String(format: "%.1f", trunc(zoom * 10) / 10)
+        DispatchQueue.main.async {
+            self.coordinate.wgs84Label = self.formatter.string(from: center.longitude as NSNumber)! + "," + self.formatter.string(from: center.latitude as NSNumber)!
+            self.coordinate.mgrsLabel = mgrs!
+            self.coordinate.zoomLabel = String(format: "%.1f", trunc(zoom * 10) / 10)
+        }
     }
 
     @objc func singleTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
