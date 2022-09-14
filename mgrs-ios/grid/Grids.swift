@@ -981,7 +981,7 @@ public class Grids: BaseGrids {
      * @param zone   grid zone
      * @param context graphics context
      */
-    public static func drawLines(_ lines: [GridLine], _ tile: GridTile, _ grid: Grid, _ zone: GridZone, _ context: CGContext) {
+    public static func drawLines(_ lines: [MGRSLine], _ tile: GridTile, _ grid: Grid, _ zone: GridZone, _ context: CGContext) {
         
         let pixelRange = zone.bounds.pixelRange(tile)
         

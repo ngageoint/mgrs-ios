@@ -209,7 +209,7 @@ public class Grid: BaseGrid {
      *            grid zone
      * @return lines
      */
-    public func lines(_ tile: GridTile, _ zone: GridZone) -> [GridLine]? {
+    public func lines(_ tile: GridTile, _ zone: GridZone) -> [MGRSLine]? {
         return lines(tile.zoom, tile.bounds, zone)
     }
     
@@ -224,8 +224,8 @@ public class Grid: BaseGrid {
      *            grid zone
      * @return lines
      */
-    public func lines(_ zoom: Int, _ tileBounds: Bounds, _ zone: GridZone) -> [GridLine]? {
-        var gridLines: [GridLine]? = nil
+    public func lines(_ zoom: Int, _ tileBounds: Bounds, _ zone: GridZone) -> [MGRSLine]? {
+        var gridLines: [MGRSLine]? = nil
         if isLinesWithin(zoom) {
             gridLines = lines(tileBounds, zone)
         }
@@ -241,7 +241,7 @@ public class Grid: BaseGrid {
      *            grid zone
      * @return lines
      */
-    public func lines(_ tileBounds: Bounds, _ zone: GridZone) -> [GridLine]? {
+    public func lines(_ tileBounds: Bounds, _ zone: GridZone) -> [MGRSLine]? {
         return zone.lines(tileBounds, type)
     }
     

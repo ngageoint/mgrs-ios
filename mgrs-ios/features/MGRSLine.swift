@@ -1,5 +1,5 @@
 //
-//  GridLine.swift
+//  MGRSLine.swift
 //  mgrs-ios
 //
 //  Created by Brian Osborn on 8/23/22.
@@ -11,8 +11,7 @@ import grid_ios
 /**
  * Line between two points
  */
-@objc(MGRSGridLine)
-public class GridLine: Line {
+public class MGRSLine: Line {
     
     /**
      * Grid type the line represents if any
@@ -75,7 +74,7 @@ public class GridLine: Line {
      * @param gridLine
      *            line to copy
      */
-    public convenience init(_ gridLine: GridLine) {
+    public convenience init(_ gridLine: MGRSLine) {
         self.init(gridLine, gridLine.gridType)
     }
     
@@ -89,7 +88,7 @@ public class GridLine: Line {
     }
     
     public override func mutableCopy(with zone: NSZone? = nil) -> Any {
-        return GridLine(self)
+        return MGRSLine(self)
     }
     
     public override func encode(with coder: NSCoder) {
@@ -106,7 +105,7 @@ public class GridLine: Line {
         super.init(coder: coder)
     }
     
-    public func isEqual(_ gridLine: GridLine?) -> Bool {
+    public func isEqual(_ gridLine: MGRSLine?) -> Bool {
         if self == gridLine {
             return true
         }
@@ -121,11 +120,11 @@ public class GridLine: Line {
     
     public override func isEqual(_ object: Any?) -> Bool {
         
-        if !(object is GridLine) {
+        if !(object is MGRSLine) {
             return false
         }
         
-        return isEqual(object as? GridLine)
+        return isEqual(object as? MGRSLine)
     }
 
     public override var hash: Int {

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'mgrs-ios'
-  s.version          = '1.0.3'
+  s.version          = '1.1.0'
   s.license          =  {:type => 'MIT', :file => 'LICENSE' }
   s.summary          = 'iOS SDK for Military Grid Reference System (MGRS)'
   s.homepage         = 'https://github.com/ngageoint/mgrs-ios'
@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.resource_bundle = { 'mgrs-ios' => ['mgrs-ios/**/mgrs*.plist'] }
   s.frameworks = 'Foundation'
 
-  s.dependency 'grid-ios', '~> 1.0.1'
+  s.dependency 'grid-ios', '~> 1.0.2'
 end

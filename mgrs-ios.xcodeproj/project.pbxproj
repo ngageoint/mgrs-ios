@@ -22,7 +22,7 @@
 		04DADAD328C239250068F52C /* GZDLabeler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAD228C239250068F52C /* GZDLabeler.swift */; };
 		04DADAD628C23A330068F52C /* MGRSTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DADAD528C23A330068F52C /* MGRSTileOverlay.swift */; };
 		04EF1DC928B4E69100760ED1 /* GridType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DC828B4E69100760ED1 /* GridType.swift */; };
-		04EF1DCC28B4EE7600760ED1 /* GridLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DCB28B4EE7600760ED1 /* GridLine.swift */; };
+		04EF1DCC28B4EE7600760ED1 /* MGRSLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DCB28B4EE7600760ED1 /* MGRSLine.swift */; };
 		04EF1DCE28B4EFFD00760ED1 /* MGRSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DCD28B4EFFD00760ED1 /* MGRSConstants.swift */; };
 		04EF1DD028B4F31F00760ED1 /* MGRSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DCF28B4F31F00760ED1 /* MGRSUtils.swift */; };
 		04EF1DD328B5038400760ED1 /* MGRSProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EF1DD228B5038400760ED1 /* MGRSProperties.swift */; };
@@ -74,7 +74,7 @@
 		04DADAD228C239250068F52C /* GZDLabeler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GZDLabeler.swift; sourceTree = "<group>"; };
 		04DADAD528C23A330068F52C /* MGRSTileOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSTileOverlay.swift; sourceTree = "<group>"; };
 		04EF1DC828B4E69100760ED1 /* GridType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridType.swift; sourceTree = "<group>"; };
-		04EF1DCB28B4EE7600760ED1 /* GridLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLine.swift; sourceTree = "<group>"; };
+		04EF1DCB28B4EE7600760ED1 /* MGRSLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSLine.swift; sourceTree = "<group>"; };
 		04EF1DCD28B4EFFD00760ED1 /* MGRSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSConstants.swift; sourceTree = "<group>"; };
 		04EF1DCF28B4F31F00760ED1 /* MGRSUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSUtils.swift; sourceTree = "<group>"; };
 		04EF1DD228B5038400760ED1 /* MGRSProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRSProperties.swift; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 		04EF1DCA28B4EE5B00760ED1 /* features */ = {
 			isa = PBXGroup;
 			children = (
-				04EF1DCB28B4EE7600760ED1 /* GridLine.swift */,
+				04EF1DCB28B4EE7600760ED1 /* MGRSLine.swift */,
 			);
 			path = features;
 			sourceTree = "<group>";
@@ -579,7 +579,7 @@
 				04EF1DC928B4E69100760ED1 /* GridType.swift in Sources */,
 				04EF1DE528B551F100760ED1 /* LongitudinalStrip.swift in Sources */,
 				04EF1DE728B5559F00760ED1 /* LatitudeBand.swift in Sources */,
-				04EF1DCC28B4EE7600760ED1 /* GridLine.swift in Sources */,
+				04EF1DCC28B4EE7600760ED1 /* MGRSLine.swift in Sources */,
 				04DADAD328C239250068F52C /* GZDLabeler.swift in Sources */,
 				04EF1DE928B65FE100760ED1 /* GridZones.swift in Sources */,
 			);

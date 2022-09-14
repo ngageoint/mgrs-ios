@@ -396,6 +396,33 @@ public class MGRS: Hashable {
                 easting, northing)
     }
     
+    /**
+     * Encodes a coordinate in degrees as a MGRS string
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @return MGRS
+     */
+    public static func from(_ longitude: Double, _ latitude: Double) -> MGRS {
+        return from(longitude, latitude, Unit.DEGREE)
+    }
+    
+    /**
+     * Encodes a coordinate in the unit as a MGRS string
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param unit
+     *            unit
+     * @return MGRS
+     */
+    public static func from(_ longitude: Double, _ latitude: Double, _ unit: grid_ios.Unit) -> MGRS {
+        return from(GridPoint(longitude, latitude, unit))
+    }
     
     /**
      * Parse a MGRS string

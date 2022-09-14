@@ -110,7 +110,7 @@ public class GridZone {
      *            grid type
      * @return lines
      */
-    public func lines(_ gridType: GridType) -> [GridLine]? {
+    public func lines(_ gridType: GridType) -> [MGRSLine]? {
         return lines(bounds, gridType)
     }
 
@@ -123,15 +123,15 @@ public class GridZone {
      *            grid type
      * @return lines
      */
-    public func lines(_ tileBounds: Bounds, _ gridType: GridType) -> [GridLine]? {
+    public func lines(_ tileBounds: Bounds, _ gridType: GridType) -> [MGRSLine]? {
 
-        var lines: [GridLine]? = nil
+        var lines: [MGRSLine]? = nil
 
         if gridType == GridType.GZD {
             // if precision is 0, draw the zone bounds
             lines = []
             for line in bounds.lines() {
-                lines?.append(GridLine(line, GridType.GZD))
+                lines?.append(MGRSLine(line, GridType.GZD))
             }
         } else {
 
@@ -177,10 +177,10 @@ public class GridZone {
                         }
 
                         // Vertical line
-                        lines?.append(GridLine(southwest, northwest, eastingPrecision))
+                        lines?.append(MGRSLine(southwest, northwest, eastingPrecision))
 
                         // Horizontal line
-                        lines?.append(GridLine(southwest, southeast, northingPrecision))
+                        lines?.append(MGRSLine(southwest, southeast, northingPrecision))
 
                         northing += precision
                     }

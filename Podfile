@@ -3,7 +3,7 @@ platform :ios, '12.0'
 use_frameworks!
 
 target 'mgrs-ios' do
-  pod 'grid-ios', '~> 1.0.1'
+  pod 'grid-ios', '~> 1.0.2'
 
   target 'mgrs-iosTests' do
     inherit! :complete

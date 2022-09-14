@@ -228,4 +228,100 @@ public class UTM {
         return UTM(zone, hemisphere, easting, northing)
     }
     
+    /**
+     * Create from a coordinate in degrees
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @return UTM
+     */
+    public static func from(_ longitude: Double, _ latitude: Double) -> UTM {
+        return from(longitude, latitude, Unit.DEGREE)
+    }
+    
+    /**
+     * Create from a coordinate in the unit
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param unit
+     *            unit
+     * @return UTM
+     */
+    public static func from(_ longitude: Double, _ latitude: Double, _ unit: grid_ios.Unit) -> UTM {
+        return from(GridPoint(longitude, latitude, unit))
+    }
+    
+    /**
+     * Create from a coordinate in degrees and zone number
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param zone
+     *            zone number
+     * @return UTM
+     */
+    public static func from(_ longitude: Double, _ latitude: Double, _ zone: Int) -> UTM {
+        return from(longitude, latitude, Unit.DEGREE, zone)
+    }
+    
+    /**
+     * Create from a coordinate in the unit and zone number
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param unit
+     *            unit
+     * @param zone
+     *            zone number
+     * @return UTM
+     */
+    public static func from(_ longitude: Double, _ latitude: Double, _ unit: grid_ios.Unit, _ zone: Int) -> UTM {
+        return from(GridPoint(longitude, latitude, unit), zone)
+    }
+    
+    /**
+     * Create from a coordinate in degrees, zone number, and hemisphere
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param zone
+     *            zone number
+     * @param hemisphere
+     *            hemisphere
+     * @return UTM
+     */
+    public static func from(_ longitude: Double, _ latitude: Double, _ zone: Int, _ hemisphere: Hemisphere) -> UTM {
+        return from(longitude, latitude, Unit.DEGREE, zone, hemisphere)
+    }
+    
+    /**
+     * Create from a coordinate in the unit, zone number, and hemisphere
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param unit
+     *            unit
+     * @param zone
+     *            zone number
+     * @param hemisphere
+     *            hemisphere
+     * @return UTM
+     */
+    public static func from(_ longitude: Double, _ latitude: Double, _ unit: grid_ios.Unit, _ zone: Int, _ hemisphere: Hemisphere) -> UTM {
+        return from(GridPoint(longitude, latitude, unit), zone, hemisphere)
+    }
+    
 }
