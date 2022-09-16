@@ -7,6 +7,7 @@
 
 import Foundation
 import grid_ios
+import MapKit
 
 /**
  * Military Grid Reference System Coordinate
@@ -261,6 +262,15 @@ public class MGRS: Hashable {
     }
 
     /**
+     * Convert to a location coordinate
+     *
+     * @return coordinate
+     */
+    public func toCoordinate() -> CLLocationCoordinate2D {
+        return toPoint().toCoordinate()
+    }
+    
+    /**
      * Convert to UTM coordinate
      *
      * @return UTM
@@ -370,7 +380,7 @@ public class MGRS: Hashable {
     }
 
     /**
-     * Encodes a point as a MGRS string
+     * Encodes a point as a MGRS
      *
      * @param point
      *            point
@@ -397,7 +407,18 @@ public class MGRS: Hashable {
     }
     
     /**
-     * Encodes a coordinate in degrees as a MGRS string
+     * Encodes a coordinate as a MGRS
+     *
+     * @param coordinate
+     *            coordinate
+     * @return MGRS
+     */
+    public static func from(_ coordinate: CLLocationCoordinate2D) -> MGRS {
+        return from(coordinate.longitude, coordinate.latitude)
+    }
+    
+    /**
+     * Encodes a coordinate in degrees as a MGRS
      *
      * @param longitude
      *            longitude
@@ -410,7 +431,7 @@ public class MGRS: Hashable {
     }
     
     /**
-     * Encodes a coordinate in the unit as a MGRS string
+     * Encodes a coordinate in the unit as a MGRS
      *
      * @param longitude
      *            longitude
@@ -530,6 +551,129 @@ public class MGRS: Hashable {
         return mgrsValue
     }
 
+    /**
+     * Parse a MGRS string into a location coordinate
+     *
+     * @param mgrs
+     *            MGRS string
+     * @return coordinate
+     */
+    public static func parseToCoordinate(_ mgrs: String) -> CLLocationCoordinate2D {
+        var coordinate = kCLLocationCoordinate2DInvalid
+        if isMGRS(mgrs) {
+            coordinate = parse(mgrs).toCoordinate()
+        }
+        return coordinate
+    }
+    
+    /**
+     * Encodes a point as a MGRS coordinate with one meter precision
+     *
+     * @param point
+     *            point
+     * @return MGRS coordinate
+     */
+    public static func coordinate(_ point: GridPoint) -> String {
+        return from(point).coordinate()
+    }
+    
+    /**
+     * Encodes a point as a MGRS coordinate with specified grid precision
+     *
+     * @param point
+     *            point
+     * @param type
+     *            grid type precision
+     * @return MGRS coordinate
+     */
+    public static func coordinate(_ point: GridPoint, _ type: GridType?) -> String {
+        return from(point).coordinate(type)
+    }
+    
+    /**
+     * Encodes a coordinate as a MGRS coordinate with one meter precision
+     *
+     * @param coordinate
+     *            coordinate
+     * @return MGRS coordinate
+     */
+    public static func coordinate(_ coordinate: CLLocationCoordinate2D) -> String {
+        return from(coordinate).coordinate()
+    }
+    
+    /**
+     * Encodes a coordinate as a MGRS coordinate with specified grid precision
+     *
+     * @param coordinate
+     *            coordinate
+     * @param type
+     *            grid type precision
+     * @return MGRS coordinate
+     */
+    public static func coordinate(_ coordinate: CLLocationCoordinate2D, _ type: GridType?) -> String {
+        return from(coordinate).coordinate(type)
+    }
+    
+    /**
+     * Encodes a coordinate in degrees as a MGRS coordinate with one meter precision
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @return MGRS coordinate
+     */
+    public static func coordinate(_ longitude: Double, _ latitude: Double) -> String {
+        return from(longitude, latitude).coordinate()
+    }
+    
+    /**
+     * Encodes a coordinate in degrees as a MGRS coordinate with specified grid precision
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param type
+     *            grid type precision
+     * @return MGRS coordinate
+     */
+    public static func coordinate(_ longitude: Double, _ latitude: Double, _ type: GridType?) -> String {
+        return from(longitude, latitude).coordinate(type)
+    }
+    
+    /**
+     * Encodes a coordinate in the unit as a MGRS coordinate with one meter precision
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param unit
+     *            unit
+     * @return MGRS coordinate
+     */
+    public static func coordinate(_ longitude: Double, _ latitude: Double, _ unit: grid_ios.Unit) -> String {
+        return from(longitude, latitude, unit).coordinate()
+    }
+    
+    /**
+     * Encodes a coordinate in the unit as a MGRS coordinate with specified grid precision
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param unit
+     *            unit
+     * @param type
+     *            grid type precision
+     * @return MGRS coordinate
+     */
+    public static func coordinate(_ longitude: Double, _ latitude: Double, _ unit: grid_ios.Unit, _ type: GridType?) -> String {
+        return from(longitude, latitude, unit).coordinate(type)
+    }
+    
     /**
      * Get the point on the western grid zone bounds point between the western
      * and eastern points

@@ -282,7 +282,7 @@ public class MGRSTileOverlay: MKTileOverlay {
      * @return MGRS
      */
     public func mgrs(_ coordinate: CLLocationCoordinate2D) -> MGRS {
-        return MGRS.from(TileUtils.toGridPoint(coordinate))
+        return MGRS.from(coordinate)
     }
     
     /**
@@ -295,6 +295,28 @@ public class MGRSTileOverlay: MKTileOverlay {
         return mgrs(TileUtils.toCoordinate(point))
     }
 
+    /**
+     * Parse a MGRS string
+     *
+     * @param mgrs
+     *            MGRS string
+     * @return MGRS
+     */
+    public static func parse(_ mgrs: String) -> MGRS {
+        return MGRS.parse(mgrs)
+    }
+
+    /**
+     * Parse a MGRS string into a location coordinate
+     *
+     * @param mgrs
+     *            MGRS string
+     * @return coordinate
+     */
+    public static func parseToCoordinate(_ mgrs: String) -> CLLocationCoordinate2D {
+        return MGRS.parseToCoordinate(mgrs)
+    }
+    
     /**
      * Get the grid precision for the zoom level
      *

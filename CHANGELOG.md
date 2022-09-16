@@ -6,12 +6,13 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ## 1.1.1 (TBD)
 
-* TBD
+* grid-ios 1.0.3
+* MGRS, MGRSTileOverlay, and UTM shortcut methods for improved objective-c compatibility
 
 ## [1.1.0](https://github.com/ngageoint/mgrs-ios/releases/tag/1.1.0) (09-14-2022)
 
 * grid-ios 1.0.2
-* GridLine renamed to MGRSLine to prevent objective c conflicting class usage with GARS
+* GridLine renamed to MGRSLine to prevent objective-c conflicting class usage with GARS
 * Additional MGRS from coordinate methods
 * Additional UTM from coordinate methods
 

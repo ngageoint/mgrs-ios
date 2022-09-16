@@ -7,6 +7,7 @@
 
 import Foundation
 import grid_ios
+import MapKit
 
 /**
  * Universal Transverse Mercator Projection
@@ -113,6 +114,15 @@ public class UTM {
     }
     
     /**
+     * Convert to a location coordinate
+     *
+     * @return coordinate
+     */
+    public func toCoordinate() -> CLLocationCoordinate2D {
+        return toPoint().toCoordinate()
+    }
+    
+    /**
      * Format to a UTM string
      *
      * @return UTM string
@@ -173,6 +183,21 @@ public class UTM {
     }
     
     /**
+     * Parse a UTM value (Zone N|S Easting Northing) into a location coordinate
+     *
+     * @param utm
+     *            UTM value
+     * @return coordinate
+     */
+    public static func parseToCoordinate(_ utm: String) -> CLLocationCoordinate2D {
+        var coordinate = kCLLocationCoordinate2DInvalid
+        if isUTM(utm) {
+            coordinate = parse(utm).toCoordinate()
+        }
+        return coordinate
+    }
+    
+    /**
      * Create from a point
      *
      * @param point
@@ -226,6 +251,17 @@ public class UTM {
         northing = round(northing * 100) * 0.01
 
         return UTM(zone, hemisphere, easting, northing)
+    }
+    
+    /**
+     * Create from a coordinate
+     *
+     * @param coordinate
+     *            coordinate
+     * @return UTM
+     */
+    public static func from(_ coordinate: CLLocationCoordinate2D) -> UTM {
+        return from(coordinate.longitude, coordinate.latitude)
     }
     
     /**
@@ -322,6 +358,152 @@ public class UTM {
      */
     public static func from(_ longitude: Double, _ latitude: Double, _ unit: grid_ios.Unit, _ zone: Int, _ hemisphere: Hemisphere) -> UTM {
         return from(GridPoint(longitude, latitude, unit), zone, hemisphere)
+    }
+    
+    /**
+     * Format to a UTM string from a point
+     *
+     * @param point
+     *            point
+     * @return UTM string
+     */
+    public static func format(_ point: GridPoint) -> String {
+        return from(point).format()
+    }
+
+    /**
+     * Format to a UTM string from a point and zone number
+     *
+     * @param point
+     *            point
+     * @param zone
+     *            zone number
+     * @return UTM string
+     */
+    public static func format(_ point: GridPoint, _ zone: Int) -> String {
+        return from(point, zone).format()
+    }
+
+    /**
+     * Format to a UTM string from a coordinate, zone number, and hemisphere
+     *
+     * @param point
+     *            coordinate
+     * @param zone
+     *            zone number
+     * @param hemisphere
+     *            hemisphere
+     * @return UTM string
+     */
+    public static func format(_ point: GridPoint, _ zone: Int, _ hemisphere: Hemisphere) -> String {
+        return from(point, zone, hemisphere).format()
+    }
+    
+    /**
+     * Format to a UTM string from a coordinate
+     *
+     * @param coordinate
+     *            coordinate
+     * @return UTM string
+     */
+    public static func format(_ coordinate: CLLocationCoordinate2D) -> String {
+        return from(coordinate).format()
+    }
+    
+    /**
+     * Format to a UTM string from a coordinate in degrees
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @return UTM string
+     */
+    public static func format(_ longitude: Double, _ latitude: Double) -> String {
+        return from(longitude, latitude).format()
+    }
+    
+    /**
+     * Format to a UTM string from a coordinate in the unit
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param unit
+     *            unit
+     * @return UTM string
+     */
+    public static func format(_ longitude: Double, _ latitude: Double, _ unit: grid_ios.Unit) -> String {
+        return from(longitude, latitude, unit).format()
+    }
+    
+    /**
+     * Format to a UTM string from a coordinate in degrees and zone number
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param zone
+     *            zone number
+     * @return UTM string
+     */
+    public static func format(_ longitude: Double, _ latitude: Double, _ zone: Int) -> String {
+        return from(longitude, latitude, zone).format()
+    }
+    
+    /**
+     * Format to a UTM string from a coordinate in the unit and zone number
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param unit
+     *            unit
+     * @param zone
+     *            zone number
+     * @return UTM string
+     */
+    public static func format(_ longitude: Double, _ latitude: Double, _ unit: grid_ios.Unit, _ zone: Int) -> String {
+        return from(longitude, latitude, unit, zone).format()
+    }
+    
+    /**
+     * Format to a UTM string from a coordinate in degrees, zone number, and hemisphere
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param zone
+     *            zone number
+     * @param hemisphere
+     *            hemisphere
+     * @return UTM string
+     */
+    public static func format(_ longitude: Double, _ latitude: Double, _ zone: Int, _ hemisphere: Hemisphere) -> String {
+        return from(longitude, latitude, zone, hemisphere).format()
+    }
+    
+    /**
+     * Format to a UTM string from a coordinate in the unit, zone number, and hemisphere
+     *
+     * @param longitude
+     *            longitude
+     * @param latitude
+     *            latitude
+     * @param unit
+     *            unit
+     * @param zone
+     *            zone number
+     * @param hemisphere
+     *            hemisphere
+     * @return UTM string
+     */
+    public static func format(_ longitude: Double, _ latitude: Double, _ unit: grid_ios.Unit, _ zone: Int, _ hemisphere: Hemisphere) -> String {
+        return from(longitude, latitude, unit, zone, hemisphere).format()
     }
     
 }
