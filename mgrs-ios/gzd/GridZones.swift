@@ -30,15 +30,15 @@ public class GridZones {
     
     private static var initialized = false
     
-    private static let semaphore = DispatchSemaphore(value: 1)
+    private static let lock = NSLock()
     
     private static func initGridZones() {
-        semaphore.wait()
+        lock.lock()
         if !initialized {
             initialize()
             initialized = true
         }
-        semaphore.signal()
+        lock.unlock()
     }
     
     private static func initialize() {

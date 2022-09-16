@@ -182,7 +182,7 @@ public class MGRSTileOverlay: MKTileOverlay {
     
     public override func loadTile(at path: MKTileOverlayPath, result: @escaping (Data?, Error?) -> Void) {
         
-        DispatchQueue.global(qos: .default).async { [self] in
+        DispatchQueue.global(qos: .userInitiated).async { [self] in
 
             var tileData: Data? = tile(path.x, path.y, path.z)
             

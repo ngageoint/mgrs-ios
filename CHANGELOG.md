@@ -7,6 +7,8 @@ Adheres to [Semantic Versioning](http://semver.org/).
 ## 1.1.1 (TBD)
 
 * grid-ios 1.0.3
+* MGRSTileOverlay user initiated quality of service threading (changed from default)
+* Thread QoS hang risk warning fix (GridZones initialization fix)
 * MGRS, MGRSTileOverlay, and UTM shortcut methods for improved objective-c compatibility
 
 ## [1.1.0](https://github.com/ngageoint/mgrs-ios/releases/tag/1.1.0) (09-14-2022)
