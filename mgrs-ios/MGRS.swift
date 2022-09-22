@@ -47,32 +47,32 @@ public class MGRS: Hashable {
     /**
      * Zone number
      */
-    let zone: Int
+    public let zone: Int
 
     /**
      * Band letter
      */
-    let band: Character
+    public let band: Character
 
     /**
      * Column letter
      */
-    let column: Character
+    public let column: Character
 
     /**
      * Row letter
      */
-    let row: Character
+    public let row: Character
 
     /**
      * Easting
      */
-    let easting: Int
+    public let easting: Int
 
     /**
      * Northing
      */
-    let northing: Int
+    public let northing: Int
     
     /**
      * Initialize
