@@ -4,6 +4,10 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## 1.1.3 (TBD)
+
+* TBD
+
 ## [1.1.2](https://github.com/ngageoint/mgrs-ios/releases/tag/1.1.2) (12-09-2022)
 
 * Public MGRS variables
