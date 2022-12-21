@@ -7,6 +7,7 @@
 
 import Foundation
 import grid_ios
+import sf_ios
 import MapKit
 
 /**
@@ -388,8 +389,18 @@ public class MGRS: Hashable {
      */
     public static func from(_ point: GridPoint) -> MGRS {
 
-        let pointDegrees = point.toDegrees()
+        let pointDegrees = (point.mutableCopy() as! GridPoint).toDegrees()
 
+        // Bound the latitude if needed
+        if pointDegrees.latitude < MGRSConstants.MIN_LAT {
+            pointDegrees.latitude = MGRSConstants.MIN_LAT
+        } else if pointDegrees.latitude > MGRSConstants.MAX_LAT {
+            pointDegrees.latitude = MGRSConstants.MAX_LAT
+        }
+        
+        // Normalize the longitude if needed
+        SFGeometryUtils.normalizeWGS84Geometry(pointDegrees)
+        
         let utm = UTM.from(pointDegrees)
 
         let bandLetter = GridZones.bandLetter(pointDegrees.latitude)
@@ -514,9 +525,7 @@ public class MGRS: Hashable {
                                 GridType.HUNDRED_KILOMETER.precision())
                                 .toPoint()
                         if gridBounds.contains(northeast) {
-                            mgrsValue = from(
-                                    GridPoint.degrees(gridSouthwest.longitude,
-                                            gridSouthwest.latitude))
+                            mgrsValue = from(gridSouthwest)
                         }
                     } else if westBounds {
                         let east = MGRS(zone, band, column, row,

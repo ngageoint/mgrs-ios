@@ -8,6 +8,7 @@
 import XCTest
 @testable import grid_ios
 @testable import mgrs_ios
+@testable import sf_ios
 
 /**
  * MGRS Test
@@ -301,6 +302,135 @@ class MGRSTestCase: XCTestCase {
         testCoordinate(17.3714337, 8.1258235, mgrs, false)
         testCoordinateMeters(1933779.15, 907610.20, mgrs, false)
 
+    }
+    
+    /**
+     * Test parsing point bounds
+     */
+    func testPointBounds() {
+        
+        // Max latitude tests
+        
+        var mgrs = "39XVP9907028094"
+        var mgrs2 = "39XVN9902494603"
+        var longitude = 50.920338
+        var latitudeBelow = 83.7
+        var latitudeAbove = 100.0
+        
+        var point = GridPoint.degrees(longitude, MGRSConstants.MAX_LAT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeBelow)
+        XCTAssertEqual(mgrs2, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, SF_WEB_MERCATOR_MAX_LAT_RANGE)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, SF_WGS84_HALF_WORLD_LAT_HEIGHT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeAbove)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        // Max latitude and max longitude tests
+
+        longitude += (2 * SF_WGS84_HALF_WORLD_LON_WIDTH)
+        
+        point = GridPoint.degrees(longitude, MGRSConstants.MAX_LAT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeBelow)
+        XCTAssertEqual(mgrs2, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, SF_WEB_MERCATOR_MAX_LAT_RANGE)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, SF_WGS84_HALF_WORLD_LAT_HEIGHT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeAbove)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        // Max latitude and min longitude tests
+        
+        longitude -= (4 * SF_WGS84_HALF_WORLD_LON_WIDTH)
+        
+        point = GridPoint.degrees(longitude, MGRSConstants.MAX_LAT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeBelow)
+        XCTAssertEqual(mgrs2, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, SF_WEB_MERCATOR_MAX_LAT_RANGE)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, SF_WGS84_HALF_WORLD_LAT_HEIGHT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeAbove)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        // Min latitude tests
+        
+        mgrs = "52CDS8938618364"
+        mgrs2 = "52CDT8854707650"
+        longitude = 128.4525
+        latitudeAbove = -79.2
+        latitudeBelow = -100.0
+        
+        point = GridPoint.degrees(longitude, MGRSConstants.MIN_LAT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeAbove)
+        XCTAssertEqual(mgrs2, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, SF_WEB_MERCATOR_MIN_LAT_RANGE)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, -SF_WGS84_HALF_WORLD_LAT_HEIGHT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeBelow)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        // Max latitude and max longitude tests
+
+        longitude += (2 * SF_WGS84_HALF_WORLD_LON_WIDTH)
+        
+        point = GridPoint.degrees(longitude, MGRSConstants.MIN_LAT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeAbove)
+        XCTAssertEqual(mgrs2, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, SF_WEB_MERCATOR_MIN_LAT_RANGE)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, -SF_WGS84_HALF_WORLD_LAT_HEIGHT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeBelow)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        // Max latitude and min longitude tests
+        
+        longitude -= (4 * SF_WGS84_HALF_WORLD_LON_WIDTH)
+        
+        point = GridPoint.degrees(longitude, MGRSConstants.MIN_LAT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeAbove)
+        XCTAssertEqual(mgrs2, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, SF_WEB_MERCATOR_MIN_LAT_RANGE)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, -SF_WGS84_HALF_WORLD_LAT_HEIGHT)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
+        point = GridPoint.degrees(longitude, latitudeBelow)
+        XCTAssertEqual(mgrs, MGRS.from(point).coordinate())
+        
     }
     
     /**
