@@ -4,8 +4,9 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## 1.1.3 (TBD)
+## [1.1.3](https://github.com/ngageoint/mgrs-ios/releases/tag/1.1.3) (01-11-2023)
 
+* grid-ios 1.0.4
 * Point to MGRS conversion latitude min/max bounding and longitude normalization
 
 ## [1.1.2](https://github.com/ngageoint/mgrs-ios/releases/tag/1.1.2) (12-09-2022)
