@@ -1,12 +1,12 @@
 
 * local lib lint
 
-pod lib lint mgrs-ios.podspec --swift-version=5
+pod lib lint mgrs-ios.podspec --swift-version=5 --use-static-frameworks
 
 * released spec lint
 
-pod spec lint mgrs-ios.podspec --swift-version=5
+pod spec lint mgrs-ios.podspec --swift-version=5 --use-static-frameworks
 
 * deploy to trunk
 
-pod trunk push mgrs-ios.podspec --swift-version=5
+pod trunk push mgrs-ios.podspec --swift-version=5 --use-static-frameworks
