@@ -9,4 +9,4 @@ pod spec lint mgrs-ios.podspec --swift-version=5 --use-static-frameworks
 
 * deploy to trunk
 
-pod trunk push mgrs-ios.podspec --swift-version=5 --use-static-frameworks
+pod trunk push mgrs-ios.podspec --swift-version=5
