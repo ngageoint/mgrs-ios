@@ -9,4 +9,9 @@ pod spec lint mgrs-ios.podspec --swift-version=5 --use-static-frameworks
 
 * deploy to trunk
 
+# Deploying w/o the ability to include "--use-static-frameworks" eventually
+# works but often with many failure attempts first. Running "pod repo update"
+# immediately before appears to increase the chance of success.
+
+pod repo update
 pod trunk push mgrs-ios.podspec --swift-version=5
