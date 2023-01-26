@@ -225,12 +225,12 @@ Include this repository by specifying it in a Podfile using a supported option.
 
 Pull from [CocoaPods](https://cocoapods.org/pods/mgrs-ios):
 
-    pod 'mgrs-ios', '~> 1.1.3'
+    pod 'mgrs-ios', '~> 1.1.4'
 
 Pull from GitHub:
 
     pod 'mgrs-ios', :git => 'https://github.com/ngageoint/mgrs-ios.git', :branch => 'master'
-    pod 'mgrs-ios', :git => 'https://github.com/ngageoint/mgrs-ios.git', :tag => '1.1.3'
+    pod 'mgrs-ios', :git => 'https://github.com/ngageoint/mgrs-ios.git', :tag => '1.1.4'
 
 Include as local project:
 

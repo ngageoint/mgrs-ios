@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.resource_bundle = { 'mgrs-ios' => ['mgrs-ios/**/mgrs*.plist'] }
   s.frameworks = 'Foundation'
 
-  s.dependency 'grid-ios', '~> 1.0.4'
+  s.dependency 'grid-ios', '~> 1.0.5'
 end

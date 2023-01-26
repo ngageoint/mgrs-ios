@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v1
+      uses: actions/checkout@v3
     - name: Install
       run: pod install
     - name: Build
-      run: xcodebuild build-for-testing -workspace mgrs-ios.xcworkspace -scheme mgrs-ios -destination 'platform=iOS Simulator,OS=latest,name=iPhone 11'
+      run: xcodebuild build-for-testing -workspace mgrs-ios.xcworkspace -scheme mgrs-ios -destination 'platform=iOS Simulator,OS=latest,name=iPhone 14'
