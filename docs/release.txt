@@ -1,13 +1,21 @@
 
-* local lib lint
+Xcode Build:
+
+xcodebuild -workspace 'mgrs-ios.xcworkspace' -scheme mgrs-ios build
+
+Xcode Test:
+
+xcodebuild test -workspace 'mgrs-ios.xcworkspace' -scheme mgrs-ios -destination 'platform=iOS Simulator,name=iPhone 15'
+
+CocoaPods Local Lint:
 
 pod lib lint mgrs-ios.podspec --swift-version=5 --use-static-frameworks
 
-* released spec lint
+CocoaPods GitHub Release Lint:
 
 pod spec lint mgrs-ios.podspec --swift-version=5 --use-static-frameworks
 
-* deploy to trunk
+CocoaPods Deploy To Trunk:
 
 # Deploying w/o the ability to include "--use-static-frameworks" eventually
 # works but often with many failure attempts first. Running "pod repo update"
