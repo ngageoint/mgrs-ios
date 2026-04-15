@@ -5,6 +5,8 @@
 //  Created by Brian Osborn on 9/2/22.
 //
 
+#if !os(watchOS)
+
 import MapKit
 import Grid
 
@@ -352,3 +354,5 @@ public class MGRSTileOverlay: MKTileOverlay {
     }
     
 }
+
+#endif

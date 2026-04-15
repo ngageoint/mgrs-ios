@@ -4,14 +4,14 @@ import PackageDescription
 
 let package = Package(
     name: "MGRS",
-    platforms: [.macOS(.v11), .iOS(.v13)],
+    platforms: [.macOS(.v11), .iOS(.v13), .watchOS(.v10)],
     products: [
         .library(
             name: "MGRS",
             targets: ["MGRS"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ngageoint/grid-ios", from: "2.0.0")
+        .package(url: "https://github.com/fawkeswei/grid-ios", from: "2.0.1")
     ],
     targets: [
         .target(
