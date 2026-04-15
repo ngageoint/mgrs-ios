@@ -11,7 +11,7 @@ let package = Package(
             targets: ["MGRS"])
     ],
     dependencies: [
-        .package(url: "https://github.com/fawkeswei/grid-ios", branch: "feature/watchOS")
+        .package(url: "https://github.com/fawkeswei/grid-ios", from: "2.0.1")
     ],
     targets: [
         .target(
