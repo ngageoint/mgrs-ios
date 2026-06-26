@@ -11,13 +11,15 @@ let package = Package(
             targets: ["MGRS"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ngageoint/grid-ios", from: "2.0.0")
+        .package(url: "https://github.com/ngageoint/grid-ios", from: "2.0.0"),
+        .package(url: "https://github.com/ngageoint/simple-features-ios", from: "5.0.0")
     ],
     targets: [
         .target(
             name: "MGRS",
             dependencies: [
-                .product(name: "Grid", package: "grid-ios")
+                .product(name: "Grid", package: "grid-ios"),
+                .product(name: "SimpleFeatures", package: "simple-features-ios")
             ],
             path: "mgrs-ios",
             resources: [

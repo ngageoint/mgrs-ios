@@ -321,7 +321,11 @@ public class MGRS: Hashable {
         // (100km square boundaries are aligned with 100km UTM northing
         // intervals)
 
-        let latBandNorthing = UTM.from(GridPoint.degrees(0, latBand)).northing
+        // *** THIS BLOCK IS THE UPDATE ***
+        // UTM northing at a band's southern edge depends on longitude; use this
+        // zone's central meridian so the 2,000km block selection is correct.
+        let centralMeridian = Double(zone * 6 - 183)
+        let latBandNorthing = UTM.from(GridPoint.degrees(centralMeridian, latBand)).northing
         let nBand = floor(latBandNorthing / 100000) * 100000
 
         // 100km grid square row letters repeat every 2,000km north; add enough
