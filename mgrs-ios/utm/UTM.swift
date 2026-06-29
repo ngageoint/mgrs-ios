@@ -443,8 +443,6 @@ public class UTM {
             y = y + falseNorthing; // make y in southern hemisphere relative to false northing
         }
         
-        x = floor(x)
-        y = floor(y)
         return UTM(Int(zone), hemisphere, x, y)
     }
     
