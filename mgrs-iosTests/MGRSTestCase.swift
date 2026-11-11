@@ -496,6 +496,35 @@ class MGRSTestCase: XCTestCase {
     }
     
     /**
+     * Test points just north of a band's southern edge decode into that band.
+     * References from GeographicLib GeoConvert. The band bottom northing used
+     * to be evaluated at longitude 0 instead of in this zone, which sent these
+     * points one 2,000 km cycle too far north (#8).
+     */
+    func testBandEdgeNorthing() {
+        let cases: [(String, Double, Double)] = [
+            ("31WEL0000097014", 64.0, 3.0),
+            ("41WNL2005597524", 64.004, 63.4101),
+            ("49WDL8121398731", 64.0149, 110.6157),
+            ("25WDL9754198864", 64.0166, -33.0503),
+        ]
+        for (value, lat, lon) in cases {
+            let point = MGRS.parse(value).toPoint().toDegrees()
+            XCTAssertEqual(lat, point.latitude, accuracy: 1e-4)
+            XCTAssertEqual(lon, point.longitude, accuracy: 1e-4)
+            XCTAssertEqual(lat, MGRS.from(GridPoint.degrees(lon, lat)).toPoint().latitude, accuracy: 1e-4)
+        }
+        // the central meridian alone is not enough in the south: the band
+        // bottom is lowest at the zone edge there
+        for lon in stride(from: -179.5, to: 180.0, by: 0.5) {
+            for lat in [-63.9999, -63.999, -63.99, -63.98, -63.95] {
+                let point = MGRS.from(GridPoint.degrees(lon, lat)).toPoint()
+                XCTAssertEqual(lat, point.latitude, accuracy: 1e-3)
+            }
+        }
+    }
+
+    /**
      * Test parsing a Svalbard MGRS string values
      */
     func testSvalbardParse() {
