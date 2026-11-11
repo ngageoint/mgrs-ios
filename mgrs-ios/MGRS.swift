@@ -320,8 +320,19 @@ public class MGRS: Hashable {
         // bottommost 100km square
         // (100km square boundaries are aligned with 100km UTM northing
         // intervals)
-
-        let latBandNorthing = UTM.from(GridPoint.degrees(0, latBand)).northing
+        //
+        // The bottom parallel of the band is lowest on the central meridian
+        // of this zone in the northern hemisphere and at the zone edge in the
+        // southern hemisphere, so take the smaller of the two, both in this
+        // zone. (Evaluating it at longitude 0, i.e. 3 degrees off the central
+        // meridian of zone 31, gave a value up to ~3.5 km too large in the
+        // north and sent points just north of a band edge one 2,000 km cycle
+        // too far.) UTM.from derives the zone from the longitude, so the edge
+        // is taken at the west edge, which still falls in this zone.
+        let centralMeridian = Double(zone * 6 - 183)
+        let latBandNorthing = min(
+            UTM.from(GridPoint.degrees(centralMeridian, latBand)).northing,
+            UTM.from(GridPoint.degrees(centralMeridian - 3, latBand)).northing)
         let nBand = floor(latBandNorthing / 100000) * 100000
 
         // 100km grid square row letters repeat every 2,000km north; add enough
